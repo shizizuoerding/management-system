@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="人社管理平台">
+    <meta name="description" content="人社管理平台">
+    <!--[if lt IE 9]>
+    <script src="../common/js/html5.js"></script>
+    <script src="../common/js/respond.min.js"></script>
+    <script src="../common/js/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../common/plugin/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" href="../../common/plugin/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" href="../../common/plugin/icheck/icheck.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" href="../../common/css/common.css"/>
+    <link rel="stylesheet" href="../../common/css/loading.css"/>
+    <!--[if IE 6]>
+    <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>人社管理平台</title>
+</head>
+<style>
+
+</style>
+<body>
+<nav class="breadcrumb">
+    <span class="size14 color6">当前位置：</span>
+    <span class="color6">系统首页</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color6">业务管理</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color size14">纸质认证信息</span>
+    <a class="btn btn-default radius r" style="line-height:1.6em;margin-top:3px" href="javascript:history.go(-1)" title="返回" ><i class="Hui-iconfont">返回</i></a>
+    <a class="btn btn-danger radius r mr-10 item_del" style="line-height:1.6em;margin-top:3px" title="删除" ><i class="Hui-iconfont">删除</i></a>
+</nav>
+<div class="page-container">
+    <div class="col-md-12 mb-20">
+        <div class="table-header clearfix bg-ob">人员基本资料</div>
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <td class="bg-ob text-c w-15">姓 名：</td>
+                <td>张大三</td>
+                <td class="bg-ob text-c w-15">性别：</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c">身份证号：</td>
+                <td>1235678909876532</td>
+                <td class="bg-ob text-c">个人编号：</td>
+                <td>82373222</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c w-15">联系电话</td>
+                <td>1808251157</td>
+                <td class="bg-ob text-c w-15">类型</td>
+                <td>城镇职工/机关事业/城镇居民</td>
+            </tr>
+
+            <!--城乡居民-->
+            <tr>
+                <td class="bg-ob text-c">市行政区划编号：</td>
+                <td>5100010</td>
+                <td class="bg-ob text-c">市行政区划名称：</td>
+                <td>成都市</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c">县行政区划编号：</td>
+                <td>5100010</td>
+                <td class="bg-ob text-c">县行政区划名称：</td>
+                <td>浦江县</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c">乡镇行政区划编号：</td>
+                <td>5100010</td>
+                <td class="bg-ob text-c">乡镇行政区划名称：</td>
+                <td>升荣镇</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c">村编号：</td>
+                <td>5100010</td>
+                <td class="bg-ob text-c">村名称：</td>
+                <td>大娅村</td>
+            </tr>
+            <!--****-->
+            <!--城镇职工或机关事业-->
+            <tr>
+                <td class="bg-ob text-c">单位编号：</td>
+                <td>3259001</td>
+                <td class="bg-ob text-c">单位名称：</td>
+                <td>成都XX纺织厂</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c">退休时间：</td>
+                <td>2016-11-29 12:00</td>
+                <td class="bg-ob text-c">退休前职务：</td>
+                <td>科长</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c">区划编码：</td>
+                <td>5100001</td>
+                <td class="bg-ob text-c">行政区划：</td>
+                <td>成都市</td>
+            </tr>
+            <!--******-->
+            </tbody>
+        </table>
+
+        <div class="table-header clearfix mt-10 bg-ob">认证信息</div>
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <td class="bg-ob text-c w-15">认证时间：</td>
+                <td>2016-11-29</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c">图片资料：</td>
+                <td colspan="3" id="fingerprint-content">
+                    <div class="mr-5" style="display: none">
+                        <a class="underline">点击展开更多</a>
+                    </div>
+                    <div class="pic-content pic-content-o-hidden" style="height: 122px;">
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                        <div class="l mr-10 mb-10">
+                            <img src="" alt="" title="照片" class="p-120">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c w-15">摘要说明：</td>
+                <td>情况属实</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c w-15">经办人员：</td>
+                <td>张三</td>
+            </tr>
+            <tr>
+                <td class="bg-ob text-c w-15">经办时间：</td>
+                <td>2016-11-29 12:00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="../../common/js/jquery-1.9.1.min.js"></script>
+<script src="../../common/plugin/h-ui/js/H-ui.js"></script>
+<script src="../../common/plugin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="../../common/js/plugin/layer/2.1/layer.js"></script>
+<script src="../../common/js/plugin/laypage/1.2/laypage.js"></script>
+<!-- <script src="../../common/js/jquery.contextmenu.r2.js"></script> -->
+<script src="../../common/js/common.js"></script>
+</body>
+<script>
+//    demo();
+
+    //通过指纹照片 指静脉照内容框的ID对超出显示点击加载更多和多余照片隐藏的功能
+    function initPicByClass(divId){
+        //通过div的id来对
+        var FCW = $(divId).width();
+        var picN = $(divId+" .l").length;
+        var picW = $(divId+" img").width();
+        if(picW*picN > FCW){
+            var showNum = Math.floor(FCW/130);
+            $(divId+" .mr-5 ").show();
+        }else{
+            $(divId+" .mr-5 ").hide();
+        }
+    }
+
+    //点击展开更多和收起
+   $(".underline").on("click",function(){
+       var text = $(this).text();
+       if(text == "收起"){
+           var id = $(this).parent().parent()[0].id;
+           $("#"+id+" .pic-content").addClass("pic-content-o-hidden");
+           $(this).text("点击展开更多");
+       }else{
+           var id = $(this).parent().parent()[0].id;
+           $("#"+id+" .pic-content").removeClass("pic-content-o-hidden");
+           $(this).text("收起");
+       }
+   })
+
+    //初始化指纹照片 指静脉照内容框的超出显示点击加载更多和多余照片隐藏的功能
+    function initPic(){
+        initPicByClass("#fingerprint-content");
+        initPicByClass("#fingervein-content");
+    }
+    initPic();
+
+/*系统用户-删除*/
+$(".item_del").on("click",function(){
+    var obj = this;
+    layer.confirm('确认要删除吗？',function(index){
+        //此处请求后台程序，下方是成功后的前台处理……
+        console.log( $(this).parents());
+        $(obj).parents("tr").remove();
+        layer.msg('已删除!',{icon:1,time:1000});
+    });
+})
+</script>
+</html>

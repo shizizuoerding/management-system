@@ -1,0 +1,109 @@
+ @charset "UTF-8";
+/*
+ * createBy:xsh,2016/6/29
+ * 初始化样式
+ */
+html,body,div,span,input,button,iframe,textarea,map,img,a img,samp,hr,
+h1,h2,h3,h4,h5,h6,b,p,blockquote,a,address,code,dl,dt,dd,ol,
+ul,li,form,label,table,tr,td,th,em,i {padding:0;margin:0;
+    border:0;outline: 0;
+    font-weight:normal;
+    font-family:'微软雅黑','宋体', Arial, Helvetica, sans-serif;
+    font-style: normal;}
+a{text-decoration: none;color: #666}
+ul,ol{list-style-type: none;}
+ul li{float: left;}
+textarea {resize: none;}
+/*html,body {height: 100%;}*/
+*{background-repeat: no-repeat;outline: none}
+/*
+ * 公用样式
+ */
+/* 居中 */
+.center{margin: 0 auto;}
+.mbtm{margin-bottom: 0}
+.mbtl{margin-left: 0 !important}
+.mbtr{margin-right: 0}
+.padr{padding-right: 0}
+.mt-40{margin-top: 40px !important;}
+.mr-10{margin-right: 10px !important;}
+
+/* 框类型 */
+.dn {display: none;}
+.dib {display: inline-block;}
+.dib{zoom:1;*display:inline;}/*ie8*/
+.db {display: block;}
+.dtc {display: table-cell;}
+
+/* 定位 */
+.pf {position: fixed;}
+.pr {position: relative;}
+.pa {position: absolute;}
+
+/* 溢出 */
+.ofh {overflow: hidden;}
+.ofa {overflow: auto;}
+.vh { visibility: hidden;}
+
+/* 水平位置 */
+.tal {text-align: left;}
+.tac {text-align: center;}
+.tar {text-align: right;}
+
+/* 垂直位置 */
+.vat {vertical-align: top;}
+.vam {vertical-align: middle;}
+.vab {vertical-align: bottom;}
+
+/* 边框置0 */
+.bdt0 {border-top: 0 !important;}
+.bdr0 {border-right: 0 !important;}
+.bdb0 {border-bottom: 0 !important;}
+.bdl0 {border-left: 0 !important;}
+
+/* 字号 */
+.size0 {font-size: 0;}
+.size12 {font-size: 12px;}
+.size14 {font-size: 14px;}
+.size16 {font-size: 16px;}
+.size18 {font-size: 18px;}
+.size20 {font-size: 20px;}
+.size22 {font-size: 22px;}
+.size24 {font-size: 24px;}
+.size26 {font-size: 26px;}
+.size30 {font-size: 30px;}
+.size32 {font-size: 32px;}
+.size34 {font-size: 34px;}
+
+/* 加粗 */
+.fwb {font-weight: bold;}
+
+/* 浮动 */
+.fl {float: left;}
+.fr {float: right;}
+
+/* 鼠标样式 */
+.cp:hover {cursor: pointer;}
+
+/*颜色*/
+.btn-pass{background-color: #02befe}
+/*.btn{background-color: rgb(204,204,204)}*/
+.mainCo{background-color:#3b94f0;}
+.colorRed{color: red}
+.color{color:#3b94f0 }
+.colorf{color: #ffffff}
+.color0{color: #000000}
+.color3{color: #333333}
+.color6{color: #666666}
+.color9{color: #999999}
+.colorGreen{color: #8CC63E}
+.colorOrange {color: orange;}
+.colorOrangeRed {color: #F15A25;}
+/* 清除浮动 */
+.clearfix:after{content: " "; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix{zoom: 1;}/* 兼容IE专用 */
+
+.box{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box;-ms-box-sizing: border-box; box-sizing: border-box;}
+.paddingNone {padding: 0;  }
+input[type="radio"],input[type="button"],button {cursor: hand;cursor: pointer}
+

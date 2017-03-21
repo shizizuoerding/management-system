@@ -1,0 +1,365 @@
+@charset "utf-8";
+/* 你自己的样式 */
+.table-bordered tbody tr:not(:last-child) th, .table-bordered tbody tr:not(:last-child) td{
+    border-bottom: 1px solid #ddd;
+}
+.tbody-width-S tbody tr td:nth-child(odd) {
+    width: 11%;
+}
+.tbody-width-S tbody tr td:nth-child(even) {
+    width: 25%;
+}
+.btn-area .layui-bg {
+    outline: none;
+    background-repeat: no-repeat;
+    background-image: url("../../../images/layui_BtnBg.png");
+    background-color: #fff;
+    border: none;
+    width: 111px;
+    height: 31px;
+    line-height: 30px;
+}
+
+.layui-bg-b{
+    background-color: #0174CF;
+}
+
+
+/*user_manage 页面*/
+.i-common {
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+}
+
+.i-a {
+    background: url('../../../images/o_icon.png') no-repeat scroll -20px -17px;
+}
+
+.i-e {
+    background: url('../../../images/o_icon.png') no-repeat scroll -60px -17px;
+}
+
+.i-d {
+    background: url('../../../images/o_icon.png') no-repeat scroll -100px -17px;
+}
+
+.table-header {
+    width: 100%;
+    /*height: 52px;*/
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-collapse: separate;
+    border-bottom: 0;
+    /*line-height: 32px;*/
+}
+
+.status-item {
+    display: inline-block;
+    /*width: 250px;*/
+    margin-bottom: 20px;
+}
+
+.search-item,.list-item {
+    display: inline-block;
+    /*width: 400px;*/
+}
+
+.select-m-box{
+    display: inline-block;
+    width: 100px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.select-m-box-l{
+    display: inline-block;
+    width: 150px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.select-m-box-l .select{
+    padding-left: 10px;
+    height: 30px;
+}
+
+.select-m-box select,.select-item .select{
+    padding-left: 10px;
+    height: 30px;
+}
+
+.search-item input {
+    width: 200px;
+    padding-left: 10px;
+}
+
+.area-item{
+    display: inline-block;
+    margin-bottom: 20px;
+    /*width: 200px;*/
+}
+.area-item input {
+    width: 100px;
+    padding-left: 10px;
+}
+
+.btn-warning:hover{
+    background-color: #c85e0b !important;
+}
+
+.min-wid-th{
+    min-width: 100px;
+}
+
+.w-15{
+    width: 15%;
+}
+
+.select-item .select-m-box{
+    width: 200px;
+    padding-left: 0;
+}
+
+.a-select-item{
+    width: 91px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.select{
+    -webkit-appearance:none;-moz-appearance:none;
+    background: no-repeat url(../../../images/select.png) 67px -2px;
+}
+.select-item .select{
+    background: no-repeat url(../../../images/select.png) 176px -2px;
+}
+
+.select-m-box-l .select{
+    background: no-repeat url(../../../images/select.png) 116px -2px;
+}
+
+.select::-ms-expand {display:none;}
+
+.create-u-content{
+    padding:20px
+}
+
+.create-u-content .input-text{
+    box-sizing: border-box;
+}
+
+.layer-btn-content{
+    margin-left: -200px;
+}
+
+table .check-box, .radio-box{
+    padding-left: 5px;
+}
+
+.layer-btn-content .btn{
+    width: 200px;
+    height: 40px;
+    padding: 9px 12px;
+    display: inline-block;
+}
+
+.layui-layer-ico {
+    background: url(../../../images/close.png) no-repeat;
+}
+
+.radio-box label{
+    margin-left: 20px;
+}
+
+.radio-box{
+    line-height: 25px;
+}
+
+/*authentication_list*/
+
+.p-70{
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+  }
+
+.p-130{
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+}
+
+.p-120{
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+}
+
+.mt-130{
+    margin-top: 130px;
+}
+
+
+.underline{
+    text-decoration: underline;
+}
+
+.bg-ob{
+    background-color: #f3f8fe
+}
+
+.pic-content-o-hidden{
+    height: 154px;
+    overflow: hidden;
+}
+
+/*统计报表样式*/
+.town-list-item{
+    display: inline-block;
+}
+
+.town-list-item a{
+    display: inline-block;
+    height: 121px;
+}
+
+.town-img-style,.arguments-img-style{
+    width:259px;
+    height: 121px;
+}
+
+.table-content{
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.bs-cb{
+    box-sizing: content-box;
+}
+
+.lh-30{
+    line-height: 30px;
+}
+
+.no-data{
+    height: 100%;
+}
+
+.ico_docu,.ico_open,.ico_close{
+    display: none !important;
+}
+
+#treeDemo li{
+    margin: 5px;
+}
+
+.node_name{
+    font-size: 14px;
+    padding: 5px 2px;
+}
+
+.checkbox_true_full+a .node_name,.checkbox_true_full_focus+a .node_name,.checkbox_true_part+a .node_name{
+    color: red !important;
+}
+
+.checkbox_false_part{
+    /*background-position: -14px 0;*/
+}
+
+/*参数设置*/
+
+.arguments-item{
+    display: inline-block;
+}
+
+.arguments-item input {
+    width: 100px;
+    padding-left: 10px;
+}
+
+.town-title-style{
+    font-size: 19px;
+    color: white;
+    margin-top: -75px;
+    font-weight: bold;
+}
+
+.arguments-title-style,.arguments-title-style-l{
+    font-size: 19px;
+    color: white;
+    margin-top: -90px;
+    font-weight: bold;
+    width: 90px;
+    text-align: left;
+}
+.arguments-title-style-l{
+    width: 100px;
+}
+
+/*清除table里textarea下部分多余空白*/
+
+table textarea{
+    margin-bottom: -10px;
+}
+
+/********************************/
+
+.choose-list{
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding:0px 10px;
+    margin: 5px;
+    line-height: 30px;
+}
+
+.Hui-aside::-webkit-scrollbar{
+    width: 0px;
+}
+
+label.error {
+    position: initial;
+    margin-left: 10px;
+}
+
+.acrossTab li:hover {
+    background-position: 0 0;
+}
+.acrossTab li:hover em {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    right: -16px;
+    background-position: right -30px;
+}
+.acrossTab li.active:hover em{
+    background-position: right -150px;
+}
+.acrossTab li.active:hover {
+    background-position: 0 -120px;
+}
+
+.breadcrumb{
+    background: #f5f5f5 no-repeat url(../../../images/position.png) 8px 13px;
+}
+
+#start-time,#end-time{
+    width: 150px;
+}
+
+.choose-list{
+    position: relative;
+}
+.choose-list i{
+    position: absolute;
+    right:-5px;
+    top:-5px;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    background-image: url(../../../images/acrossTab-close.png);
+    background-repeat: no-repeat;
+    background-position: 0 bottom;
+}

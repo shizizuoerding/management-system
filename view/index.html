@@ -1,0 +1,397 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="keywords" content="后台管理系统">
+    <meta name="description" content="后台管理系统">
+    <!--[if lt IE 9]>
+    <script src="../common/js/html5.js"></script>
+    <script src="../common/js/respond.min.js"></script>
+    <script src="../common/js/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../common/plugin/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" href="../common/plugin/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" href="../common/plugin/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" href="../common/plugin/icheck/icheck.css"/>
+    <link rel="stylesheet" href="../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" href="../common/plugin/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" href="../common/css/index.css"/>
+    <link rel="stylesheet" href="../common/css/common.css"/>
+    <!--[if IE 6]>
+    <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>后台管理系统</title>
+</head>
+<style type="text/css">
+    .Hui-aside .menu_dropdown .menu-manage {
+        background-image: url(../common/images/da1.png);
+    }
+    .Hui-aside .menu_dropdown .menu-app {
+        background-image: url(../common/images/r_menu_sys.png);
+    }
+    .Hui-aside .menu_dropdown .menu-sys {
+        background-image: url(../common/images/gw1.png);
+    }
+    .Hui-aside .menu_dropdown .menu-user {
+        background-image: url(../common/images/user1.png);
+    }
+    .Hui-aside .menu_dropdown .menu-ret {
+        background-image: url(../common/images/workma0.png);
+    }
+    .Hui-aside .menu_dropdown .menu-sys:hover {background-image: url("../common/images/gw1.png")}
+    .logo{
+        line-height: 105px;
+        margin-left: 20px;
+        height: 105px;
+        color: #fff;
+        font-size: 30px;
+        float: left!important;
+        margin-top: 30px;
+        font-weight:700;
+       /* font-style: oblique;*/
+    }
+</style>
+<body>
+<header class="navbar-wrapper">
+    <div class="navbar navbar-fixed-top">
+        <div class="container-fluid cl">
+            <div class="logo">后 台 管 理 系 统</div>
+            <!-- <a class="logo navbar-logo f-l mr-10 hidden-xs" href="index.html">
+                <img src="../common/images/logo.png">
+            </a> -->
+            <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="#">H-ui</a>
+            <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
+            <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
+                <ul class="cl">
+                    <li>
+                        <a href="">
+                            <div class="nav_btn">
+                                <img src="../common/images/nav_menu_out.png"/></div>
+                            <p>退出登录</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<aside class="Hui-aside">
+    <!-- <div class="a_user_model">
+        <div class="a_user_control">
+            <div class="a_u_form clearfix">
+                <div class="a_u_icon">
+                    <img src="../common/images/user.png"/>
+                </div>
+                <div class="a_u_wel size14">
+                    <p>欢迎您!</p>
+                    <p class="nickname">wdddddddddddddd</p>
+                </div>
+            </div>
+            <div class="a_u_info mt-15">
+                <p>用户姓名：<label class="r_name">布鲁斯韦恩</label></p>
+                <p>身份角色：<label class="r_id">12223</label></p>
+            </div>
+        </div>
+    </div> -->
+    <input runat="server" id="divScrollValue" type="hidden" value=""/>
+    <div class="menu_dropdown bk_2">
+        <dl id="menu-manage">
+            <dt class="menu-manage">景点管理
+                <i class="Hui-iconfont menu_dropdown-arrow"></i>
+            </dt>
+            <dd>
+                <ul>
+                    <!-- <li>
+                        <a data-href="business_manage/authentication_fail.html" data-title="添加景点"
+                           href="javascript:void(0)">添加景点
+                           <span class="right-img"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-href="business_manage/authentication_list.html" data-title="编辑景点"
+                           href="javascript:void(0)">编辑景点
+                           <span class="right-img"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-href="business_manage/data_import.html" data-title="删除景点" href="javascript:void(0)">删除景点
+                            <span class="right-img"></span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a data-href="business_manage/data_unmatch.html" data-title="查看景点" href="javascript:void(0)">查看景点
+                            <span class="right-img"></span>
+                        </a>
+                    </li>
+                    <!-- <li><a data-href="business_manage/authentication_fact.html" data-title="纸质认证管理"
+                           href="javascript:void(0)">纸质认证管理<span
+                            class="right-img"></span></a></li>
+                    <li><a data-href="business_manage/authentication_network.html" data-title="异地联网认证数据"
+                           href="javascript:void(0)">异地联网认证数据<span
+                            class="right-img"></span></a></li> -->
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-terminal">
+            <dt class="menu-terminal">特色城市管理
+                <i class="Hui-iconfont menu_dropdown-arrow"></i>
+            </dt>
+            <dd>
+                <ul>
+                    <!-- <li>
+                        <a data-href="terminal_manage/equipment_situation.html" data-title="添加特色城市"
+                           href="javascript:void(0)">添加特色城市
+                           <span class="right-img"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-href="terminal_manage/fault_analyze.html" data-title="编辑特色城市" href="javascript:void(0)">编辑特色城市
+                            <span class="right-img"></span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a data-href="terminal_manage/user_manage.html" data-title="查看特色城市"
+                           href="javascript:void(0)">查看特色城市
+                           <span class="right-img"></span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a data-href="terminal_manage/set_parameter.html" data-title="删除特色城市" href="javascript:void(0)">删除特色城市
+                            <span class="right-img"></span>
+                        </a>
+                    </li> -->
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-form">
+            <dt class="menu-form">攻略管理
+                <i class="Hui-iconfont menu_dropdown-arrow"></i>
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        <a data-href="form_manage/town_list.html" data-title="查看攻略" href="javascript:void(0)">查看攻略
+                            <span class="right-img"></span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a data-href="form_manage/village_list.html" data-title="删除攻略"
+                           href="javascript:void(0)">删除攻略
+                           <span class="right-img"></span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a data-href="form_manage/institution_list.html" data-title="审核攻略"
+                           href="javascript:void(0)">审核攻略
+                           <span class="right-img"></span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a data-href="form_manage/under_the_Raiders.html" data-title="攻略下架"
+                           href="javascript:void(0)">攻略下架
+                           <span class="right-img"></span>
+                        </a>
+                    </li> -->
+                    <!-- <li>
+                        <a data-href="form_manage/egis.html" data-title="审核通过"
+                           href="javascript:void(0)">审核通过
+                           <span class="right-img"></span>
+                        </a>
+                    </li> -->
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-sys">
+            <dt class="menu-sys">近期活动管理
+                <i class="Hui-iconfont menu_dropdown-arrow"></i>
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        <a data-href="system_manage/user_manage.html" data-title="查看近期活动" href="javascript:void(0)">查看近期活动
+                            <span class="right-img"></span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a data-href="system_manage/system_arguments.html" data-title="删除近期活动"
+                           href="javascript:void(0)">删除近期活动
+                           <span class="right-img"></span>
+                        </a>
+                    </li> -->
+                    <!-- <li><a data-href="system_manage/operation_log.html" data-title="操作日志查询" href="javascript:void(0)">操作日志查询<span
+                            class="right-img"></span></a></li>
+                    <li><a data-href="system_manage/upgrade_manage.html" data-title="终端升级管理" href="javascript:void(0)">终端升级管理<span
+                            class="right-img"></span></a></li>
+                    <li><a data-href="system_manage/area_service.html" data-title="行政区域维护" href="javascript:void(0)">行政区域维护<span
+                            class="right-img"></span></a></li> -->
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-ret">
+            <dt class="menu-ret">反馈信息管理
+                <i class="Hui-iconfont menu_dropdown-arrow"></i>
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        <a data-href="feedback_manage/feedback_manage.html" data-title="收集反馈信息" href="javascript:void(0)">收集反馈信息
+                            <span class="right-img"></span>
+                        </a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-app">
+            <dt class="menu-app">App版本管理
+                <i class="Hui-iconfont menu_dropdown-arrow"></i>
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        <a data-href="app_manage/upgrade_manage.html" data-title="更改app版本" href="javascript:void(0)">更改app版本
+                            <span class="right-img"></span>
+                        </a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-user">
+            <dt class="menu-user">用户管理
+                <i class="Hui-iconfont menu_dropdown-arrow"></i>
+            </dt>
+            <dd>
+                <ul>
+                    <li>
+                        <a data-href="user_manage/add_admin.html" data-title="添加景区管理员" href="javascript:void(0)">查看景区管理员
+                            <span class="right-img"></span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a data-href="user_manage/remove_admin.html" data-title="删除景区管理员" href="javascript:void(0)">删除景区管理员
+                            <span class="right-img"></span>
+                        </a>
+                    </li> -->
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</aside>
+<!--收起展开按钮-->
+<div class="dislpayArrow hidden-xs">
+    <a class="pngfix in_arrow" href="javascript:void(0);" onClick="displaynavbar(this)"></a>
+</div>
+<section class="Hui-article-box">
+    <div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
+        <div class="Hui-tabNav-wp">
+            <ul id="min_title_list" class="acrossTab cl">
+                <li class="active acs_home">
+                    <a class="h_icon"></a>
+                    <span title="首页" data-href="business_manage/data_unmatch.html">系统首页</span>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+        <div class="Hui-tabNav-more btn-group">
+            <a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;">
+                <i class="Hui-iconfont">&#xe6d4;</i>
+            </a>
+            <a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;">
+                <i class="Hui-iconfont">&#xe6d7;</i>
+            </a>
+        </div>
+    </div>
+    <div id="iframe_box" class="Hui-article">
+        <div class="show_iframe acs_fm">
+            <div style="display:none" class="loading"></div>
+            <iframe scrolling="yes" frameborder="0" src="business_manage/data_unmatch.html"></iframe>
+        </div>
+    </div>
+</section>
+<!--右键菜单-->
+<div class="contextMenu" id="Huiadminmenu">
+    <ul>
+        <li id="closethis">关闭当前</li>
+        <li id="closeall">关闭全部</li>
+    </ul>
+</div>
+
+<script src="../common/js/jquery-1.9.1.min.js"></script>
+<script src="../common/plugin/h-ui/js/H-ui.js"></script>
+<script src="../common/js/plugin/layer/2.1/layer.js"></script>
+<script src="../common/js/plugin/laypage/1.2/laypage.js"></script>
+<script src="../common/js/jquery.contextmenu.r2.js"></script>
+<script src="../common/js/common.js"></script>
+<script src="../common/plugin/h-ui.admin/js/H-ui.admin.js"></script>
+<script>
+    // tuichu
+    function quit() {
+        layer.confirm('确认要退出吗？', function (index) {
+            //此处请求后台程序，下方是成功后的前台处理……
+            window.open("login.html", "_self");
+//        $(obj).parents("tr").remove();
+//        layer.msg('已删除!',{icon:1,time:1000});
+        });
+    }
+    $(function () {
+        $("#min_title_list li").contextMenu('Huiadminmenu', {
+            bindings: {
+                'closethis': function(t) {
+                    if(t.find("i")){
+                        t.find("i").on("click");
+                    }
+                },
+                'closeall': function(t) {
+                 //alert('Trigger was '+t.id+'\nAction was Email');
+                }
+            },
+            onContextMenu: {
+
+            }
+         });
+        //  点击修改密码—向首页中添加密码修改页面
+        $(".scf_btn").click(function () {
+            if ($("#min_title_list").find(".acs_pwd").length > 0) {
+                //  tabsNav
+                $("#min_title_list").find("li").removeClass('active');
+                $("#min_title_list").find(".acs_pwd").addClass("active");
+                //  iframe
+                $(".pwd_fm").siblings("li").hide();
+                $(".pwd_fm").show();
+            }
+            else {
+                //  tabsNav
+                $("#min_title_list").find("li").removeClass('active');
+                $("#min_title_list").width('auto').append("<li class='acs_pwd active'><span data-href=" + $(this).find("a").data('href') + ">密码安全</span><i></i><em></em></li>");
+                //  iframe
+                $("#iframe_box").append("<div class='show_iframe pwd_fm' style='display:block;'><div class='loading'></div><iframe frameborder='0' src=" + $(this).find("a").data('href') + "></iframe></div>");
+            }
+        })
+
+        $(".wel_btn").click(function () {
+            if ($("#min_title_list").find(".acs_home").length > 0) {
+                //  tabsNav
+                $("#min_title_list").find("li").removeClass('active');
+                $("#min_title_list").find(".acs_home").addClass("active");
+                //  iframe
+                $(".show_iframe").hide();
+                $(".acs_fm").siblings("li").hide();
+                $(".acs_fm").show();
+            }
+            else {
+                //  tabsNav
+                $("#min_title_list").find("li").removeClass('active');
+                $("#min_title_list").width('auto').append("<li class='acs_home active'><span data-href=" + $(this).find("a").data('href') + ">系统首页</span><i></i><em></em></li>");
+                //  iframe
+                $("#iframe_box").append("<div class='show_iframe acs_fm' style='display:block;'><div class='loading'></div><iframe frameborder='0' src=" + $(this).find("a").data('href') + "></iframe></div>");
+            }
+        })
+    });
+</script>
+</body>
+</html>

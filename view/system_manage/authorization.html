@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="手机导游平台">
+    <meta name="description" content="手机导游平台">
+    <!--[if lt IE 9]>
+    <script src="../common/js/html5.js"></script>
+    <script src="../common/js/respond.min.js"></script>
+    <script src="../common/js/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../common/plugin/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" href="../../common/plugin/Hui-iconfont/1.0.7/iconfont.css"/>
+    <!--<link rel="stylesheet" href="../../common/plugin/icheck/icheck.css"/>-->
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" href="../../common/plugin/ztree/zTreeStyle.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" href="../../common/css/common.css"/>
+    <!--[if IE 6]>
+    <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>手机导游平台</title>
+</head>
+<body>
+<nav class="breadcrumb">
+    <span class="size14 color6">当前位置：</span>
+    <span class="color6">系统首页</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color6">近期活动管理</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color size14">活动信息详情</span>
+    <a class="btn btn-default radius r" style="line-height:1.6em;margin-top:3px" href="javascript:history.go(-1)" title="返回" ><i class="Hui-iconfont">返回</i></a>
+</nav>
+<div class="page-container">
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td class="bg-ob text-c">活动名称：</td>
+                    <td>露营</td>
+                    <td class="bg-ob text-c">活动地点：</td>
+                    <td>紫柏山</td>
+                    <td class="bg-ob text-c">活动时间：</td>
+                    <td>2017-01-15</td>
+                    <td class="bg-ob text-c">发布时间：</td>
+                    <td>2017-01-02</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-header clearfix bg-ob mt-20">
+            <div class="text-c">活动详情</div>
+        </div>
+        <div class="table-content pd-10" style="height:300px">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;柏山位于秦岭南麓留坝县境内，素有“黄山归来不看岳、九寨归来不看水、紫柏归来不看草”之说。尤其紫柏山的草甸天坑很吸引人。紫柏山西峰顶地势平坦开阔，便于露营。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;紫柏山的两面都可以上山。一面是从凤县过来，在破屋的北门上山，大约3、4小时行程。一面从张良庙进山。从张良庙到紫柏山前山景区门口大约8KM，徒步约2.5小时。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;交通指南：可以从西汉高速，自驾车大约4小时就会到汉中，从汉中到留坝大约72公里，1个小时20分钟就能够到达。
+        </div>
+        <!-- <div class="text-c mt-20 layer-btn-content mb-20" style="margin-left: 0px;">
+            <div class="btn btn-primary radius mr-10 layui-bg-b">保存</div>
+        </div> -->
+    </div>
+</div>
+<script src="../../common/js/jquery-1.9.1.min.js"></script>
+<script src="../../common/plugin/h-ui/js/H-ui.js"></script>
+<script src="../../common/plugin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="../../common/js/plugin/layer/2.1/layer.js"></script>
+<script src="../../common/js/plugin/laypage/1.2/laypage.js"></script>
+<!--<script type="text/javascript" src="../../common/plugin/icheck/jquery.icheck.min.js"></script>-->
+<script type="text/javascript" src="../../common/plugin/ztree/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="../../common/plugin/ztree/jquery.ztree.excheck.min.js"></script>
+<!-- <script src="../../common/js/jquery.contextmenu.r2.js"></script> -->
+<script src="../../common/js/common.js"></script>
+</body>
+<script>
+//   $(".check-box input").on("click",function(){
+//       //判断是否选中
+//       if($(this).is(':checked')){
+//            //选中
+//            $(this).nextAll("label").addClass("color-r");
+//       }else{
+//            //未选中
+//           $(this).nextAll("label").removeClass("color-r");
+//       }
+//   })
+
+   var setting = {
+       check: {
+           enable: true
+       },
+       data: {
+           simpleData: {
+               enable: true
+           }
+       }
+   };
+
+   // var zNodes =[
+   //     { id:1, pId:0,sid:"",name:"业务处理",open:true},
+   //     { id:11, pId:1, name:"脱机认证未通过处理",open:true},
+   //     { id:12, pId:1, name:"认证查询"},
+   //     { id:13, pId:1, name:"业务数据导入"},
+   //     { id:14, pId:1, name:"处理未匹配数据"},
+   //     { id:2, pId:0, name:"终端设备管控",open:true},
+   //     { id:21, pId:2, name:"设备运行情况",open:true},
+   //     { id:22, pId:2, name:"运行故障分析"},
+   //     { id:23, pId:2, name:"设备用户管理"},
+   //     { id:24, pId:2, name:"设备参数设置"}
+   // ];
+
+   var code;
+
+    function setCheck() {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                py = $("#py").attr("checked")? "p":"",
+                sy = $("#sy").attr("checked")? "s":"",
+                pn = $("#pn").attr("checked")? "p":"",
+                sn = $("#sn").attr("checked")? "s":"",
+                type = { "Y":py + sy, "N":pn + sn};
+        zTree.setting.check.chkboxType = type;
+        showCode('setting.check.chkboxType = { "Y" : "' + type.Y + '", "N" : "' + type.N + '" };');
+    }
+   function showCode(str) {
+       if (!code) code = $("#code");
+       code.empty();
+       code.append("<li>"+str+"</li>");
+   }
+
+   $(document).ready(function(){
+       $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+       setCheck();
+       $("#py").bind("change", setCheck);
+       $("#sy").bind("change", setCheck);
+       $("#pn").bind("change", setCheck);
+       $("#sn").bind("change", setCheck);
+   });
+</script>
+</html>

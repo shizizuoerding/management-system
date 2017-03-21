@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="后台管理系统">
+    <meta name="description" content="后台管理系统">
+    <!--[if lt IE 9]>
+    <script src="../common/js/html5.js"></script>
+    <script src="../common/js/respond.min.js"></script>
+    <script src="../common/js/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../common/plugin/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" href="../../common/plugin/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" href="../../common/plugin/icheck/icheck.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" href="../../common/css/common.css"/>
+    <!--[if IE 6]>
+    <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>后台管理系统</title>
+</head>
+<style>
+    .col-c{
+        color: #ce9304;
+    }
+    .col-r{
+        color: #d40404;
+    }
+    a:hover{
+        color: black;
+    }
+</style>
+<body>
+<nav class="breadcrumb">
+    <span class="size14 color6">当前位置：</span>
+    <span class="color6">系统首页</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color6">用户管理</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color size14">查看景区管理员</span>
+    <!-- <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">刷新</i></a> -->
+</nav>
+<div class="page-container">
+    <div class="ml-20">
+        <div class="btn btn-primary radius mr-10 layui-bg-b create-u">添加景区管理员</div>
+        <div class="btn btn-warning radius">批量删除</div>
+    </div>
+    <div class="col-md-12 mt-20">
+        <!-- <div class="table-header clearfix">
+            <div class="status-item">
+                <span>账号状态：</span>
+                <span class="select-m-box">
+                  <select class="select" size="1" name="demo1">
+                    <option value="" selected>正常</option>
+                    <option value="1">菜单一</option>
+                    <option value="2">菜单二</option>
+                    <option value="3">菜单三</option>
+                  </select>
+                </span>
+            </div>
+            <div class="search-item ml-20">
+                <span>关键词：</span>
+                <input  type="text" class="input-text in-b" value="" placeholder="姓名/身份证号" width="150" id="username" name="username">
+                <a class="btn btn-primary radius ml-20 layui-bg-b">查询</a>
+            </div>
+        </div> -->
+        <table class="table table-bordered">
+            <thead class="text-c">
+                <tr>
+                  <th class="bg-ob"><input type="checkbox" value="" name=""></th>
+                  <th class="bg-ob">登录账号</th>
+                  <th class="bg-ob">用户姓名</th>
+                  <th class="bg-ob">行政区划</th>
+                  <th class="bg-ob">身份角色</th>
+                  <!-- <th class="bg-ob">身份证号</th> -->
+                  <th class="bg-ob">联系电话</th>
+                  <!-- <th class="bg-ob">账号状态</th> -->
+                  <!-- <th class="bg-ob">最近登录IP</th>
+                  <th class="bg-ob">最近登录时间</th> -->
+                  <th class="bg-ob">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-c"><input type="checkbox" value="" name=""></td>
+                    <td class="text-c">
+                        xiaomi123457
+                    </td>
+                    <td class="text-c">宋晓飞</td>
+                    <td class="text-c">西安市</td>
+                    <td class="text-c">景区管理员</td>
+                    <!-- <td class="text-c">1302199209871234</td> -->
+                    <td class="text-c">18408251157</td>
+                    <!-- <td class="text-c">正常</td> -->
+                    <!-- <td class="text-c">120.0.0.1</td>
+                    <td class="text-c">2017-01-02</td> -->
+                    <td class="text-c min-wid-th">
+                        <!-- <a class="color3 in-b mr-20" title="权限" href="authorization.html"> <i class="i-a i-common"></i>
+                        </a> -->
+                        <!-- <a class="color3 in-b mr-20 col-c" href="authorization.html">查看</a> -->
+                        <!-- <a class="color3 in-b mr-20 js-edit" title="编辑"> <i class="i-e i-common"></i>
+                        </a> -->
+                        <a class="color3 in-b item_del col-r">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-c"><input type="checkbox" value="" name=""></td>
+                    <td class="text-c">
+                        xiaomi123457
+                    </td>
+                    <td class="text-c">宋晓飞</td>
+                    <td class="text-c">西安市</td>
+                    <td class="text-c">景区管理员</td>
+                    <!-- <td class="text-c">1302199209871234</td> -->
+                    <td class="text-c">18408251157</td>
+                    <!-- <td class="text-c">正常</td>
+                    <td class="text-c">120.0.0.1</td>
+                    <td class="text-c">2017-01-02</td> -->
+                    <td class="text-c ">
+                        <!-- <a class="color3 in-b mr-20" title="权限" href="authorization.html"> <i class="i-a i-common"></i>
+                        </a> -->
+                        <!-- <a class="color3 in-b mr-20 col-c" href="authorization.html">查看</a> -->
+                        <!-- <a class="color3 in-b mr-20 js-edit" title="编辑"> <i class="i-e i-common"></i>
+                        </a> -->
+                        <a class="color3 in-b item_del col-r">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-c"><input type="checkbox" value="" name=""></td>
+                    <td class="text-c">
+                        xiaomi123457
+                    </td>
+                    <td class="text-c">宋晓飞</td>
+                    <td class="text-c">西安市</td>
+                    <td class="text-c">景区管理员</td>
+                    <!-- <td class="text-c">1302199209871234</td> -->
+                    <td class="text-c">18408251157</td>
+                    <!-- <td class="text-c">正常</td>
+                    <td class="text-c">120.0.0.1</td>
+                    <td class="text-c">2017-01-02</td> -->
+                    <td class="text-c ">
+                        <!-- <a class="color3 in-b mr-20" title="权限" href="authorization.html"> <i class="i-a i-common"></i>
+                        </a> -->
+                        <!-- <a class="color3 in-b mr-20 col-c" href="authorization.html">查看</a> -->
+                        <!-- <a class="color3 in-b mr-20 js-edit" title="编辑"> <i class="i-e i-common"></i>
+                        </a> -->
+                        <a class="color3 in-b item_del col-r">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-c"><input type="checkbox" value="" name=""></td>
+                    <td class="text-c">
+                        xiaomi123457
+                    </td>
+                    <td class="text-c">宋晓飞</td>
+                    <td class="text-c">西安市</td>
+                    <td class="text-c">景区管理员</td>
+                    <!-- <td class="text-c">1302199209871234</td> -->
+                    <td class="text-c">18408251157</td>
+                    <!-- td class="text-c">正常</td>
+                    <td class="text-c">120.0.0.1</td>
+                    <td class="text-c">2017-01-02</td> -->
+                    <td class="text-c ">
+                        <!-- <a class="color3 in-b mr-20 " title="权限" href="authorization.html"> <i class="i-a i-common"></i>
+                        </a> -->
+                        <!-- <a class="color3 in-b mr-20 col-c" href="authorization.html">查看</a> -->
+                        <!-- <a class="color3 in-b mr-20 js-edit" title="编辑"> <i class="i-e i-common"></i>
+                        </a> -->
+                        <a class="color3 in-b item_del col-r">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="in-b f-l mt-30 mb-30">
+            <span class="size14">当前第1页</span>
+            <span class="size14">共3页</span>
+            <span class="size14">共45条记录</span>
+        </div>
+        <div class="in-b f-r mt-30 mb-30">
+            <div class="divPager"></div>
+        </div>
+    </div>
+
+    <!--<table class="table"><tbody><tr><td class="bg-ob text-c w-15">密码初始化：</td><td><div class="radio-box"><input type="radio" id="radio-1" name="demo-radio1" checked><label for="radio-1">否</label></div><div class="radio-box"><input type="radio" id="radio-2" name="demo-radio1" ><label for="radio-2">是</label></div></td></tr></tbody></table>-->
+
+    <!--<table class="table table-bordered" style="border-bottom: 0">-->
+        <!--<tbody>-->
+        <!--<tr>-->
+            <!--<td class="bg-ob text-c w-15">-->
+                <!--<span class="c-red">*</span>身份角色：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<div class="select-item col-xs-3 col-sm-6">-->
+                    <!--<span class="select-m-box">-->
+                      <!--<select class="select" size="1" name="demo1">-->
+                          <!--<option value="" selected>请选择身份角色</option>-->
+                      <!--</select>-->
+                    <!--</span>-->
+                <!--</div>-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td class="bg-ob text-c w-15">-->
+                <!--<span class="c-red"> *</span>所属区域：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<div class="a-select-item">-->
+                    <!--<span class="select-m-box">-->
+                      <!--<select class="select" size="1" name="demo1">-->
+                          <!--<option value="" selected>省</option>-->
+                      <!--</select>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<div class="a-select-item">-->
+                    <!--<span class="select-m-box">-->
+                      <!--<select class="select" size="1" name="demo1">-->
+                          <!--<option value="" selected>市</option>-->
+                      <!--</select>-->
+                    <!--</span>-->
+                <!--</div>-->
+                <!--<div class="a-select-item">-->
+                    <!--<span class="select-m-box">-->
+                      <!--<select class="select" size="1" name="demo1">-->
+                          <!--<option value="" selected>县(区)</option>-->
+                      <!--</select>-->
+                    <!--</span>-->
+                <!--</div>-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+    <!--<table class="table table-bordered">-->
+        <!--<tbody>-->
+        <!--<tr>-->
+            <!--<td class="bg-ob text-c w-15">-->
+                <!--<span class="c-red">*</span>登录账号：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="text" placeholder="默认尺寸" class="input-text radius">-->
+            <!--</td>-->
+            <!--<td class="bg-ob text-c w-15">-->
+                <!--<span class="c-red">*</span>联系电话：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="text" placeholder="默认尺寸" class="input-text radius">-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td class="bg-ob text-c">-->
+                <!--<span class="c-red">*</span>登录状态：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<div class="a-select-item">-->
+                    <!--<span class="select-m-box">-->
+                      <!--<select class="select" size="1" name="demo1">-->
+                          <!--<option value="" selected>正常</option>-->
+                      <!--</select>-->
+                    <!--</span>-->
+                <!--</div>-->
+            <!--</td>-->
+            <!--<td class="bg-ob text-c">-->
+                <!--<span class="c-red">*</span>用户性别：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<div class="radio-box">-->
+                    <!--<input type="radio" id="radio-1" name="demo-radio1" checked>-->
+                    <!--<label for="radio-1">男</label>-->
+                <!--</div>-->
+                <!--<div class="radio-box">-->
+                    <!--<input type="radio" id="radio-2" name="demo-radio1" >-->
+                    <!--<label for="radio-2">女</label>-->
+                <!--</div>-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td class="bg-ob text-c w-15">-->
+                <!--<span class="c-red">*</span>联系电话：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="text" placeholder="默认尺寸" class="input-text radius">-->
+            <!--</td>-->
+            <!--<td class="bg-ob text-c w-15">-->
+                <!--<span class="c-red">*</span>身份证号：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="text" placeholder="默认尺寸" class="input-text radius">-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td class="bg-ob text-c w-15">-->
+                <!--<span class="c-red">*</span>联系电话：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="text" placeholder="默认尺寸" class="input-text radius">-->
+            <!--</td>-->
+            <!--<td class="bg-ob text-c w-15">-->
+                <!--<span class="c-red">*</span>身份证号：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="text" placeholder="默认尺寸" class="input-text radius">-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td class="bg-ob text-c">-->
+                <!--<span class="c-red">*</span>工作单位：-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<input type="text" placeholder="默认尺寸" class="input-text radius">-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+    <!--<div class="text-c mt-20">-->
+        <!--<div class="btn btn-primary radius mr-10 layui-bg-b">确定</div>-->
+        <!--<div class="btn btn-default radius">取消</div>-->
+    <!--</div>-->
+
+</div>
+<script src="../../common/js/jquery-1.9.1.min.js"></script>
+<script src="../../common/plugin/h-ui/js/H-ui.js"></script>
+<script src="../../common/plugin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="../../common/js/plugin/layer/2.1/layer.js"></script>
+<script src="../../common/js/plugin/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="../../common/plugin/icheck/jquery.icheck.min.js"></script>
+<!-- <script src="../../common/js/jquery.contextmenu.r2.js"></script> -->
+<script src="../../common/js/common.js"></script>
+</body>
+<script>
+    demo();
+
+    function openLayer(title,content){
+        layer.open({
+            type: 1,
+            skin: 'layui-layer-demo', //样式类名
+            anim: 2,
+            title:[title,""],
+            area: ['920px', 'auto'], //宽高
+            shadeClose: true, //开启遮罩关闭
+            content: content
+        });
+        $(".layui-layer-title").css({
+            "padding": "0 50px 0 20px"
+        });
+        $(".layui-layer-ico").css({
+            "background": "url(../../common/images/close.png) no-repeat"
+        });
+
+        $('.radio-box input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue'
+        });
+    }
+
+    //询问框
+    var createTable = '<table class="table table-bordered" style="border-bottom: 0"><tbody><tr><td class="bg-ob text-c w-15"><span class="c-red">*</span>身份角色：</td><td><div class="select-item col-xs-3 col-sm-6"><span class="select-m-box"><select class="select" size="1" name="demo1"><option value="" selected>请选择身份角色</option></select></span></div></td><td class="bg-ob text-c w-15"><span class="c-red">*</span>用户姓名：</td><td><input type="text" placeholder="" class="input-text radius"></td></tr><tr><td class="bg-ob text-c w-15"><span class="c-red"> *</span>所属区域：</td><td><div class="a-select-item"><span class="select-m-box"><select class="select" size="1" name="demo1"><option value="" selected>省</option></select></span></div><div class="a-select-item"><span class="select-m-box"><select class="select" size="1" name="demo1"><option value="" selected>市</option></select></span></div><div class="a-select-item"><span class="select-m-box"><select class="select" size="1" name="demo1"><option value="" selected>县(区)</option></select></span></div></td></tr></tbody></table><table class="table table-bordered"><tbody><tr><td class="bg-ob text-c w-15"><span class="c-red">*</span>登录账号：</td><td><input type="text" placeholder="" class="input-text radius"></td><td class="bg-ob text-c w-15"><span class="c-red">*</span>登录密码：</td><td><input type="text" placeholder="" class="input-text radius"></td></tr><tr><td class="bg-ob text-c">&nbsp;用户性别：</td><td><div class="radio-box"><input type="radio" id="radio-1" name="demo-radio1" checked><label for="radio-1">男</label></div><div class="radio-box"><input type="radio" id="radio-2" name="demo-radio1" ><label for="radio-2">女</label></div></td><td class="bg-ob text-c w-15">&nbsp;联系电话：</td><td><input type="text" placeholder="" class="input-text radius"></td></tbody></table><div class="text-c mt-20 layer-btn-content"><div class="btn btn-primary radius mr-10 layui-bg-b">确定</div><div class="btn btn-default radius layui-layer-close">取消</div></div>';
+    var editTable = '<table class="table table-bordered" style="border-bottom: 0"><tbody><tr><td class="bg-ob text-c w-15"><span class="c-red">*</span>身份角色：</td><td><div class="select-item col-xs-3 col-sm-6"><span class="select-m-box"><select class="select" size="1" name="demo1"><option value="" selected>请选择身份角色</option></select></span></div></td></tr><tr><td class="bg-ob text-c w-15"><span class="c-red"> *</span>所属区域：</td><td><div class="a-select-item"><span class="select-m-box"><select class="select" size="1" name="demo1"><option value="" selected>省</option></select></span></div><div class="a-select-item"><span class="select-m-box"><select class="select" size="1" name="demo1"><option value="" selected>市</option></select></span></div><div class="a-select-item"><span class="select-m-box"><select class="select" size="1" name="demo1"><option value="" selected>县(区)</option></select></span></div></td></tr></tbody></table><table class="table table-bordered"><tbody><tr><td class="bg-ob text-c w-15"><span class="c-red">*</span>登录账号：</td><td><input type="text" placeholder="" class="input-text radius"></td><td class="bg-ob text-c w-15"><span class="c-red">*</span>联系电话：</td><td><input type="text" placeholder="" class="input-text radius"></td></tr><tr><td class="bg-ob text-c"><span class="c-red">*</span>登录状态：</td><td><div class="a-select-item"><span class="select-m-box"><select class="select" size="1" name="demo1"><option value="" selected>正常</option></select></span></div></td><td class="bg-ob text-c">&nbsp;用户性别：</td><td><div class="radio-box"><input type="radio" id="radio-1" name="demo-radio1" checked><label for="radio-1">男</label></div><div class="radio-box"><input type="radio" id="radio-2" name="demo-radio1" ><label for="radio-2">女</label></div></td></tr><table class="table table-bordered" style="border-bottom: 0;border-top: 0"><tbody><tr><td class="bg-ob text-c w-15">密码初始化：</td><td><div class="radio-box"><input type="radio" id="radio-3" name="ifPwInit" checked><label for="radio-3">否</label></div><div class="radio-box"><input type="radio" id="radio-4" name="ifPwInit" ><label for="radio-4">是</label></div></td></tr></tbody></table><table class="table table-bordered"><tbody><tr><td class="bg-ob text-c w-15">&nbsp;联系电话：</td><td><input type="text" placeholder="" class="input-text radius"></td><td class="bg-ob text-c w-15">&nbsp;身份证号：</td><td><input type="text" placeholder="" class="input-text radius"></td></tr><tr><td class="bg-ob text-c">&nbsp;工作单位：</td><td><input type="text" placeholder="" class="input-text radius"></td></tr></tbody></table><div class="text-c mt-20 layer-btn-content"><div class="btn btn-primary radius mr-10 layui-bg-b">确定</div><div class="btn btn-default radius layui-layer-close">取消</div></div>';
+
+    $(".create-u").on("click",function(){
+//        layer.open({
+//            type: 1,
+//            skin: 'layui-layer-demo', //样式类名
+//            anim: 2,
+//            title:["创建用户<div style='float:right;font-size: 14px;'>说明：创建用户时，初始密码默认是123456</div>",""],
+//            area: ['920px', 'auto'], //宽高
+//            shadeClose: true, //开启遮罩关闭
+//            content: '<div class="create-u-content">'+table+'</div>'
+//        });
+//        $(".layui-layer-title").css({
+//            "padding": "0 50px 0 20px"
+//        });
+        var title = "添加景区管理员<div style='float:right;font-size: 14px;'>说明：添加景区管理员时，初始密码默认是123456</div>";
+        var content = '<div class="create-u-content">'+createTable  +'</div>';
+        openLayer(title,content);
+    })
+
+    $(".js-edit").on("click",function(){
+        var title = '修改用户';
+        var content = '<div class="create-u-content">'+editTable+'</div>';
+        openLayer(title,content);
+    })
+
+    /*系统用户-删除*/
+    $(".item_del").on("click",function(){
+        var obj = this;
+        layer.confirm('确认要删除吗？',function(index){
+            //此处请求后台程序，下方是成功后的前台处理……
+            console.log( $(this).parents());
+            $(obj).parents("tr").remove();
+            layer.msg('已删除!',{icon:1,time:1000});
+        });
+    })
+</script>
+</html>

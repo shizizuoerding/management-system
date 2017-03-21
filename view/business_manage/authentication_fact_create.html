@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="人社管理平台">
+    <meta name="description" content="人社管理平台">
+    <!--[if lt IE 9]>
+    <script src="../common/js/html5.js"></script>
+    <script src="../common/js/respond.min.js"></script>
+    <script src="../common/js/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../common/plugin/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" href="../../common/plugin/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" href="../../common/plugin/icheck/icheck.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" href="../../common/css/common.css"/>
+    <!--[if IE 6]>
+    <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>人社管理平台</title>
+</head>
+<style>
+    
+</style>
+<body>
+<nav class="breadcrumb">
+    <span class="size14 color6">当前位置：</span>
+    <span class="color6">系统首页</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color6">业务管理</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color size14">添加纸质认证管理</span>
+    <a class="btn btn-default radius r ml-10" style="line-height:1.6em;margin-top:3px" title="返回" href="javascript:history.go(-1)"><i class="Hui-iconfont">返回</i></a>
+</nav>
+<div class="page-container">
+    <div class="col-md-12 mt-20">
+        <div class="table-header clearfix bg-ob" style="border: 1px solid #ddd;">
+            <span>温馨提示：</span>
+            <ul class="ml-20" style="list-style-type:disc">
+                <li>请仔细核实认证人员的相关资料；</li>
+            </ul>
+        </div>
+
+        <div class="table-header clearfix mt-20 mb-20" style="border: 1px solid #ddd;">
+            <form action="" id="form">
+                <div class="search-item ml-20">
+                    <span>
+                        <span class="color-r">*</span>身份证号：
+                    </span>
+                    <input type="text" class="input-text in-b" value="" placeholder="姓名/身份证号" width="150" id="username" name="username" required>
+                    <a class="btn btn-primary radius ml-20 layui-bg-b check">检索</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="table-content pd-10" style="height:240px;display: none">
+            <div class="color9 text-c no-data" style="line-height:218px">
+                系统提示：未检索到该人员，无法完成认证，请先导入业务数据。
+            </div>
+        </div>
+
+        <div style="display:none">
+            <table class="table table-bordered tbody-width-S">
+                <tbody>
+                <tr>
+                    <td class="text-c bg-ob">姓名：</td>
+                    <td class="">孙大海</td>
+                    <td class="text-c bg-ob">性别：</td>
+                    <td class="">男</td>
+                </tr>
+                <tr>
+                    <td class="text-c bg-ob">身份证号：</td>
+                    <td class="">123456789009876543</td>
+                    <td class="text-c bg-ob">个人编号：</td>
+                    <td class="">82345887</td>
+                </tr>
+                <tr>
+                    <td class="text-c bg-ob">联系电话：</td>
+                    <td class="">18408251157</td>
+                    <td class="text-c bg-ob">类型：</td>
+                    <td class="">城镇职工/机关事业/城乡居民</td>
+                </tr>
+                <tr>
+                    <td class="text-c bg-ob">单位编号：</td>
+                    <td class="">2016823749</td>
+                    <td class="text-c bg-ob">单位名称：</td>
+                    <td class="">成都市XX公司</td>
+                </tr>
+                <tr>
+                    <td class="text-c bg-ob">退休时间：</td>
+                    <td class="">2016-11-29 12:00</td>
+                    <td class="text-c bg-ob">退休前职务：</td>
+                    <td class="">科长</td>
+                </tr>
+                <tr>
+                    <td class="text-c bg-ob">区划编码：</td>
+                    <td class="">510001</td>
+                    <td class="text-c bg-ob">行政区划：</td>
+                    <td class="">成都市</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered mt-20 mb-20">
+                <tbody>
+                    <tr>
+                        <td class="text-c">
+                            图片资料：
+                        </td>
+                        <td>
+                            <span class="btn-upload form-group ml-10">
+                                <input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly="" nullmsg="请添加附件！" style="width:200px">
+                                <a href="javascript:void(0);" class="btn-primary upload-btn btn bs-cb">选择文件</a>
+                                <input type="file" multiple="" name="file-2" class="input-file valid">
+                                <span class="color9 ml-20">/*最多可上传5张图片*/</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-c">
+                            <span class="color-r">*</span>
+                            摘要说明
+                        </td>
+                        <td>
+                            <textarea name="" class="textarea radius ml-10" id="" style="width: 400px;"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="text-c mt-20 layer-btn-content mb-20" style="margin-left: 0px;">
+                <div class="btn btn-primary radius mr-10 layui-bg-b">确定</div>
+                <a class="btn btn-default radius" href="javascript:history.go(-1)">取消</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="../../common/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../common/plugin/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../../common/plugin/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="../../common/plugin/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script src="../../common/plugin/h-ui/js/H-ui.js"></script>
+<script src="../../common/plugin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="../../common/js/plugin/layer/2.1/layer.js"></script>
+<script src="../../common/js/plugin/laypage/1.2/laypage.js"></script>
+<!-- <script src="../../common/js/jquery.contextmenu.r2.js"></script> -->
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/plugin/datePicker/WdatePicker.js"></script>
+</body>
+<script>
+//    demo();
+$("#form").validate();
+    $(".check").on("click",function(){
+        $("#form").submit();
+    })
+</script>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="后台管理系统">
+    <meta name="description" content="后台管理系统">
+    <!--[if lt IE 9]>
+    <script src="../common/js/html5.js"></script>
+    <script src="../common/js/respond.min.js"></script>
+    <script src="../common/js/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../common/plugin/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" href="../../common/plugin/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" href="../../common/plugin/icheck/icheck.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" href="../../common/css/common.css"/>
+    <!--[if IE 6]>
+    <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>后台管理系统</title>
+</head>
+<style>
+    .text-c{
+        height: 44px;
+    }
+    .p-160{
+        width: 160px;
+    }
+    textarea{
+        border: 1px solid #ddd;
+    }
+</style>
+<body>
+<nav class="breadcrumb">
+    <span class="size14 color6">当前位置：</span>
+    <span class="color6">系统首页</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color6">景点管理</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color size14">景点详情</span>
+    <a class="btn btn-default radius r" style="line-height:1.6em;margin-top:3px" href="javascript:history.go(-1)" title="返回" ><i class="Hui-iconfont">返回</i></a>
+</nav>
+<div class="page-container">
+    <div class="col-md-12 mt-20 mb-20">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <!-- td class="bg-ob text-c">被授权对象：</td>
+                    <td>操作员</td> -->
+                    <td class="bg-ob text-c">景点名称：</td>
+                    <!-- <td class="bg-ob text-c">兵马俑</td> -->
+                    <td style="background:#fff;">
+                        <div class="input-group">
+                            <input type="text" class="input-text" value="" placeholder="兵马俑">
+                        </div>
+                    </td>
+                    <td class="bg-ob text-c">所在城市：</td>
+                    <td style="background:#fff;">
+                        <div class="input-group">
+                            <input type="text" class="input-text" value="" placeholder="西安">
+                        </div>
+                    </td>
+                    <td class="bg-ob text-c">地理位置：</td>
+                    <!-- <td class="bg-ob text-c">陕西省西安市临潼区</td> -->
+                    <td style="background:#fff;">
+                        <div class="input-group">
+                            <input type="text" class="input-text" value="" placeholder="陕西省西安市临潼区">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-header clearfix bg-ob" style="margin-top:10px;">简单介绍</div>
+        <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
+        <table class="table table-bordered" style="margin-top:10px;border-bottom: 0;">
+            <tbody>
+            <tr>
+                <td style="width:100px;text-align: center;">
+                    图文介绍
+                </td>
+                <td>
+                    <span class="btn-upload form-group ml-10">
+                        <input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly="" nullmsg="请添加图片！" style="width:200px">
+                        <a href="javascript:void(0);" class="btn-primary upload-btn btn bs-cb">选择文件</a>
+                        <input type="file" multiple="" name="file-2" class="input-file valid">
+                    </span>
+                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">确定</a>
+                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">添加文字</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td class="bg-ob text-c"><img src="../../common/images/bingmayong1.jpg" style="width:450px;height:250px;"></td>
+                </tr>
+            </tbody>
+        </table>
+            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="bg-ob text-c"><img src="../../common/images/tongmache.jpg" style="width:450px;height:250px;"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
+        <table class="table table-bordered" style="margin-top:10px;">
+            <tbody>
+            <tr>
+                <td style="width:100px;text-align: center;">
+                    语音介绍
+                </td>
+                <td>
+                    <span class="btn-upload form-group ml-10">
+                        <input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly="" nullmsg="请添加语音文件！" style="width:200px">
+                        <a href="javascript:void(0);" class="btn-primary upload-btn btn bs-cb">选择文件</a>
+                        <input type="file" multiple="" name="file-2" class="input-file valid">
+                    </span>
+                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">确定</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered" style="margin-top:10px;border-bottom: 0;">
+            <tbody>
+            <tr>
+                <td style="width:100px;text-align: center;">
+                    相册
+                </td>
+                <td>
+                    <span class="btn-upload form-group ml-10">
+                        <input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly="" nullmsg="请添加图片！" style="width:200px">
+                        <a href="javascript:void(0);" class="btn-primary upload-btn btn bs-cb">选择文件</a>
+                        <input type="file" multiple="" name="file-2" class="input-file valid">
+                    </span>
+                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">确定</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <td>
+                    <img src="../../common/images/bing1.jpg" class="p-120 p-160">
+                    <img src="../../common/images/bing2.jpg" class="p-120 p-160">
+                    <img src="../../common/images/bing3.jpg" class="p-120 p-160">
+                    <img src="../../common/images/bing4.jpg" class="p-120 p-160">
+                    <img src="../../common/images/bing5.jpg" class="p-120 p-160">
+                    <img src="../../common/images/bing6.jpg" class="p-120 p-160">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="text-c mt-20 layer-btn-content mb-20" style="margin-left: 0px;">
+            <div class="btn btn-primary radius mr-10 layui-bg-b" id="baocun">保存</div>
+        </div>
+<script src="../../common/js/jquery-1.9.1.min.js"></script>
+<script src="../../common/plugin/h-ui/js/H-ui.js"></script>
+<script src="../../common/plugin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="../../common/js/plugin/layer/2.1/layer.js"></script>
+<script src="../../common/js/plugin/laypage/1.2/laypage.js"></script>
+<!-- <script src="../../common/js/jquery.contextmenu.r2.js"></script> -->
+<script src="../../common/js/common.js"></script>
+</body>
+<script>
+//    demo();
+
+    //通过指纹照片 指静脉照内容框的ID对超出显示点击加载更多和多余照片隐藏的功能
+    function initPicByClass(divId){
+        //通过div的id来对
+        var FCW = $(divId).width();
+        var picN = $(divId+" .l").length;
+        var picW = $(divId+" img").width();
+        if(picW*picN > FCW){
+            var showNum = Math.floor(FCW/130);
+            $(divId+" .mr-5 ").show();
+        }else{
+            $(divId+" .mr-5 ").hide();
+        }
+    }
+
+    //点击展开更多和收起
+   $(".underline").on("click",function(){
+       var text = $(this).text();
+       if(text == "收起"){
+           var id = $(this).parent().parent()[0].id;
+           $("#"+id+" .pic-content").addClass("pic-content-o-hidden");
+           $(this).text("点击展开更多");
+       }else{
+           var id = $(this).parent().parent()[0].id;
+           $("#"+id+" .pic-content").removeClass("pic-content-o-hidden");
+           $(this).text("收起");
+       }
+   })
+
+    //初始化指纹照片 指静脉照内容框的超出显示点击加载更多和多余照片隐藏的功能
+    function initPic(){
+        initPicByClass("#fingerprint-content");
+        initPicByClass("#fingervein-content");
+    }
+    initPic();
+    $("#baocun").on("click",function(){
+        var obj = this;
+        layer.confirm('确认要保存吗？',function(index){
+            //此处请求后台程序，下方是成功后的前台处理……
+            console.log( $(this).parents());
+            // $(obj).parents("tr").remove();
+            layer.msg('已保存!',{icon:1,time:1000});
+        });
+    })
+</script>
+</html>

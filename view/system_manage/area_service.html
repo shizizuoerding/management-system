@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="人社管理平台">
+    <meta name="description" content="人社管理平台">
+    <!--[if lt IE 9]>
+    <script src="../common/js/html5.js"></script>
+    <script src="../common/js/respond.min.js"></script>
+    <script src="../common/js/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../common/plugin/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" href="../../common/plugin/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" href="../../common/plugin/icheck/icheck.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" href="../../common/css/common.css"/>
+    <!--[if IE 6]>
+    <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>人社管理平台</title>
+</head>
+<style>
+    
+</style>
+<body>
+<nav class="breadcrumb">
+    <span class="size14 color6">当前位置：</span>
+    <span class="color6">系统首页</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color6">系统管理</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color size14">行政区域维护</span>
+    <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">刷新</i></a>
+</nav>
+<div class="page-container">
+    <div class="ml-20">
+        <div class="btn btn-primary radius mr-10 layui-bg-b create-a">创建</div>
+        <div class="btn btn-warning radius">批量删除</div>
+    </div>
+    <div class="col-md-12 mt-20">
+        <div class="table-header clearfix" style="background-color: #f3f8fe">
+            <div class="search-item">
+                <span>区划名称：</span>
+                <input  type="text" class="input-text in-b" value="" placeholder="姓名/身份证号" width="150" id="username" name="username">            
+                <a class="btn btn-primary radius ml-5 layui-bg-b">查询</a>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <thead class="text-c">
+                <tr>
+                  <th class="bg-ob" width="40"><input type="checkbox" value="" name=""></th>
+                  <th class="bg-ob">区划编号</th>
+                  <th class="bg-ob">行政区划</th>
+                  <th class="bg-ob" width="100">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-c"><input type="checkbox" value="" name=""></td>
+                    <td class="text-c d-num">
+                        123456
+                    </td>
+                    <td class="text-c">锦江区</td>
+                    <td class="text-c min-wid-th">
+                        <a class="color3 in-b mr-20 edit-a" title="编辑"> <i class="i-e i-common"></i>
+                        </a>
+                        <a class="color3 in-b item_del" title="删除" > <i class="i-d i-common"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-c"><input type="checkbox" value="" name=""></td>
+                    <td class="text-c d-num">
+                        222222
+                    </td>
+                    <td class="text-c">锦江区</td>
+                    <td class="text-c min-wid-th">
+                        <a class="color3 in-b mr-20 edit-a" title="编辑"> <i class="i-e i-common"></i>
+                        </a>
+                        <a class="color3 in-b item_del" title="删除"> <i class="i-d i-common"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-c"><input type="checkbox" value="" name=""></td>
+                    <td class="text-c d-num">
+                        450123
+                    </td>
+                    <td class="text-c">锦江区</td>
+                    <td class="text-c min-wid-th">
+                        <a class="color3 in-b mr-20 edit-a" title="编辑"> <i class="i-e i-common"></i>
+                        </a>
+                        <a class="color3 in-b item_del" title="删除"> <i class="i-d i-common"></i>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-c"><input type="checkbox" value="" name=""></td>
+                    <td class="text-c d-num">
+                        510104
+                    </td>
+                    <td class="text-c">锦江区</td>
+                    <td class="text-c min-wid-th">
+                        <a class="color3 in-b mr-20 edit-a" title="编辑"> <i class="i-e i-common"></i>
+                        </a>
+                        <a class="color3 in-b item_del" title="删除" ><i class="i-d i-common"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="in-b f-l mt-30 mb-30">
+            <span class="size14">当前第1页</span>
+            <span class="size14">共3页</span>
+            <span class="size14">共45条记录</span>
+        </div>
+        <div class="in-b f-r mt-30 mb-30">
+            <div class="divPager"></div>
+        </div>
+    </div>
+</div>
+<script src="../../common/js/jquery-1.9.1.min.js"></script>
+<script src="../../common/plugin/h-ui/js/H-ui.js"></script>
+<script src="../../common/plugin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="../../common/js/plugin/layer/2.1/layer.js"></script>
+<script src="../../common/js/plugin/laypage/1.2/laypage.js"></script>
+<!-- <script src="../../common/js/jquery.contextmenu.r2.js"></script> -->
+<script src="../../common/js/common.js"></script>
+</body>
+<script>
+    demo();
+
+    function openLayer(title,content){
+        layer.open({
+            type: 1,
+            skin: 'layui-layer-demo', //样式类名
+            anim: 2,
+            title:[title,""],
+            area: ['920px', 'auto'], //宽高
+            shadeClose: true, //开启遮罩关闭
+            content: content
+        });
+        $(".layui-layer-title").css({
+            "padding": "0 50px 0 20px"
+        });
+        $(".layui-layer-ico").css({
+            "background": "url(../../common/images/close.png) no-repeat"
+        });
+
+        $('.radio-box input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue'
+        });
+    }
+
+    //询问框内容
+    //创建行政区划弹窗
+    $(".create-a").on("click",function(){
+        //创建时table内容区域
+        var createTable = '<table class="table table-bordered"><tbody><tr><td class="bg-ob text-c w-15"><span class="c-red">*</span>区划编号：</td><td><input type="text" placeholder="" class="input-text radius"></td><td class="bg-ob text-c w-15"><span class="c-red"> *</span>区划名称：</td><td><input type="text" placeholder="" class="input-text radius"></td></tr></tbody></table><div class="text-c mt-20 layer-btn-content"><div class="btn btn-primary radius mr-10 layui-bg-b">确定</div><div class="btn btn-default radius layui-layer-close">取消</div></div>';
+        var title = "创建行政区划";
+        var content = '<div class="create-u-content">'+createTable  +'</div>';
+        openLayer(title,content);
+    })
+
+    //编辑行政区划弹窗
+    $(".edit-a").on("click",function(){
+        //获取当前修改的区划编号
+        var dNum = $(this).parent().parent().children(".d-num").text();
+        //编辑时table内容区域
+        var editTable = '<table class="table table-bordered"><tbody><tr><td class="bg-ob text-c w-15">区划编号：</td><td><input type="text" placeholder="" disabled class="input-text radius" value="'+dNum+'"></td><td class="bg-ob text-c w-15"><span class="c-red"> *</span>区划名称：</td><td><input type="text" placeholder="" class="input-text radius"></td></tr></tbody></table><div class="text-c mt-20 layer-btn-content"><div class="btn btn-primary radius mr-10 layui-bg-b">确定</div><div class="btn btn-default radius layui-layer-close">取消</div></div>';
+        var title = "修改行政区划";
+        var content = '<div class="create-u-content">'+editTable  +'</div>';
+        openLayer(title,content);
+    })
+
+    /*行政区域-删除*/
+    $(".item_del").on("click",function(){
+        var obj = this;
+        layer.confirm('确认要删除吗？',function(index){
+            //此处请求后台程序，下方是成功后的前台处理……
+            console.log( $(this).parents());
+            $(obj).parents("tr").remove();
+            layer.msg('已删除!',{icon:1,time:1000});
+        });
+    })
+</script>
+</html>
