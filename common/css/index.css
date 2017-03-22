@@ -9,7 +9,7 @@ body{background-color: #F1F1F1}
 /*导航和内容框*/
 .Hui-aside,.Hui-article-box {top:105px;}
 /*.Hui-aside {width:320px;padding-top:0;background:#0174CF;border:none;}*/
-.Hui-aside {width:260px;padding-top:0;background:#0174CF;border:none;}
+.Hui-aside {width:260px;padding-top:50px;background:#0058B1;border:none;}
 /*.Hui-article-box {left:335px;top:103px;}*/
 /*.big-page .Hui-aside {left:-320px;}*/
 .Hui-article-box {left:275px;top:103px;}

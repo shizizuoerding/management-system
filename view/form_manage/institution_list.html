@@ -84,8 +84,8 @@
                     <td class="text-c">2017-01-02</td> -->
                     <td class="text-c ">
                         <a class="color3 in-b mr-20 col-c" href="authorization.html">查看</a>
-                        <a class="color3 in-b mr-20 col-g" href="authorization.html">审核通过</a>
-                        <a class="color3 in-b mr-20 col-r" href="authorization.html">审核不通过</a>
+                        <a class="color3 in-b mr-20 col-g">审核通过</a>
+                        <a class="color3 in-b mr-20 col-r">审核不通过</a>
                         <!-- <a class="color3 in-b mr-20 js-edit" title="编辑"> <i class="i-e i-common"></i>
                         </a> -->
                         <!-- <a class="color3 in-b item_del col-r">删除</a> -->
@@ -102,8 +102,8 @@
                     <td class="text-c">2017-01-02</td> -->
                     <td class="text-c ">
                         <a class="color3 in-b mr-20 col-c" href="authorization.html">查看</a>
-                        <a class="color3 in-b mr-20 col-g" href="authorization.html">审核通过</a>
-                        <a class="color3 in-b mr-20 col-r" href="authorization.html">审核不通过</a>
+                        <a class="color3 in-b mr-20 col-g">审核通过</a>
+                        <a class="color3 in-b mr-20 col-r">审核不通过</a>
                         <!-- <a class="color3 in-b mr-20 js-edit" title="编辑"> <i class="i-e i-common"></i>
                         </a> -->
                         <!-- <a class="color3 in-b item_del col-r">删除</a> -->
@@ -120,8 +120,8 @@
                     <td class="text-c">2017-01-02</td> -->
                     <td class="text-c ">
                         <a class="color3 in-b mr-20 col-c" href="authorization.html">查看</a>
-                        <a class="color3 in-b mr-20 col-g" href="authorization.html">审核通过</a>
-                        <a class="color3 in-b mr-20 col-r" href="authorization.html">审核不通过</a>
+                        <a class="color3 in-b mr-20 col-g">审核通过</a>
+                        <a class="color3 in-b mr-20 col-r">审核不通过</a>
                         <!-- <a class="color3 in-b mr-20 js-edit" title="编辑"> <i class="i-e i-common"></i>
                         </a> -->
                         <!-- <a class="color3 in-b item_del col-r">删除</a> -->
@@ -135,8 +135,8 @@
                     <td class="text-c">2017-01-02</td>
                     <td class="text-c ">
                         <a class="color3 in-b mr-20 col-c" href="authorization.html">查看</a>
-                        <a class="color3 in-b mr-20 col-g" href="authorization.html">审核通过</a>
-                        <a class="color3 in-b mr-20 col-r" href="authorization.html">审核不通过</a>
+                        <a class="color3 in-b mr-20 col-g">审核通过</a>
+                        <a class="color3 in-b mr-20 col-r">审核不通过</a>
                         <!-- <a class="color3 in-b mr-20 js-edit" title="编辑"> <i class="i-e i-common"></i>
                         </a> -->
                         <!-- <a class="color3 in-b item_del col-r">删除</a> -->
@@ -225,6 +225,24 @@
             console.log( $(this).parents());
             $(obj).parents("tr").remove();
             layer.msg('已删除!',{icon:1,time:1000});
+        });
+    })
+    $(".col-g").on("click",function(){
+        var obj = this;
+        layer.confirm('确认审核通过吗？',function(index){
+            //此处请求后台程序，下方是成功后的前台处理……
+            console.log( $(this).parents());
+            // $(obj).parents("tr").remove();
+            layer.msg('审核通过!',{icon:1,time:1000});
+        });
+    })
+    $(".col-r").on("click",function(){
+        var obj = this;
+        layer.confirm('确认不审核通过吗？',function(index){
+            //此处请求后台程序，下方是成功后的前台处理……
+            console.log( $(this).parents());
+            // $(obj).parents("tr").remove();
+            layer.msg('审核不通过!',{icon:1,time:1000});
         });
     })
 </script>
