@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
     <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/style.css"/>
     <link rel="stylesheet" href="../../common/css/common.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=cb84c659c88a7cc83b935a009b3a9cfd&plugin=AMap.Geocoder"></script>
     <!--[if IE 6]>
     <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
     <script>DD_belatedPNG.fix('*');</script>
@@ -69,11 +70,13 @@
                     <td class="bg-ob text-c" style="background:#fff;">兵马俑</td>
                     <td class="bg-ob text-c">所在城市：</td>
                     <td class="bg-ob text-c" style="background:#fff;">西安</td>
-                    <td class="bg-ob text-c">地理位置：</td>
-                    <td class="bg-ob text-c" style="background:#fff;">陕西省西安市临潼区</td>
                 </tr>
             </tbody>
         </table>
+
+        <div class="table-header clearfix bg-ob" style="margin-top:10px;">地理位置</div>
+        <div id="container"></div>
+
         <div class="table-header clearfix bg-ob" style="margin-top:10px;">简单介绍</div>
         <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;background:#fff;padding:10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为"世界第八大奇迹”，1987年由联合国教科文组织列入“世界人类文化遗产”目录，现已被评为国家5A级旅游景区。
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1974年3月，陕西临潼县的村民在秦始皇陵东1.5公里处打井时，意外地发现了许多碎陶人，经考古工作者探测，这是一个长方形的秦代兵马俑坑。按照被发现的时间，它们分别定名为一、二、三号坑。这一发现震惊中外，1975年国务院批准在一号坑原址上建一座占地16000平方米的博物馆，并于1979年10月正式对外开放。二号和三号展坑也陆续于1989年和1994年正式展出。1999年6月，又奇迹般的发现彩色兵马俑。
@@ -180,6 +183,23 @@
 </body>
 <script>
 //    demo();
+
+    var map, geolocation;
+    //加载地图，调用浏览器定位服务
+    map = new AMap.Map('container', {
+        resizeEnable: true,
+        zoom:14
+    });
+    marker = new AMap.Marker({
+        icon : icon,//24px*24px
+        map : map,
+        position: [109.281166,34.385152],
+        draggable: false,
+        clickable:true,
+        cursor: 'move',
+        raiseOnDrag: false
+    })
+    marker.setMap(map);
 
     //通过指纹照片 指静脉照内容框的ID对超出显示点击加载更多和多余照片隐藏的功能
     function initPicByClass(divId){
