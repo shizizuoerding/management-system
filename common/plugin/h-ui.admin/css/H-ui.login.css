@@ -29,7 +29,7 @@ body{font-size:14px}
     left:50%; top:48%;
     /*margin-left:-309px;*/
     margin-left: -200px;
-    margin-top:-184px; padding:38px 0 30px;
+    margin-top:-120px; padding:38px 0 30px;
     -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius:5px;}
 .loginLine {margin-left:-116px;position:absolute;top:0;width:232px;height:20px;left:50%;background:no-repeat url(../../../images/login_line.png);}
 /*.btn-primary {background-color: #0071ba}*/
