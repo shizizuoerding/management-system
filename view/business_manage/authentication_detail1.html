@@ -45,6 +45,11 @@
     textarea{
         border: 1px solid #ddd;
     }
+    #container{
+        height: 500px;
+        margin: 0px
+        width:100%;
+    }
 </style>
 <body>
 <nav class="breadcrumb">
@@ -74,7 +79,7 @@
             </tbody>
         </table>
 
-        <div class="table-header clearfix bg-ob" style="margin-top:10px;">地理位置</div>
+        <div class="table-header clearfix bg-ob" style="margin-top:10px;">景点位置：</div>
         <div id="container"></div>
 
         <div class="table-header clearfix bg-ob" style="margin-top:10px;">简单介绍</div>
@@ -183,15 +188,15 @@
 </body>
 <script>
 //    demo();
-
     var map, geolocation;
     //加载地图，调用浏览器定位服务
     map = new AMap.Map('container', {
+        center: [109.281166,34.385152],
         resizeEnable: true,
-        zoom:14
+        zoom:15
     });
     marker = new AMap.Marker({
-        icon : icon,//24px*24px
+        // icon : icon,//24px*24px
         map : map,
         position: [109.281166,34.385152],
         draggable: false,
@@ -200,6 +205,7 @@
         raiseOnDrag: false
     })
     marker.setMap(map);
+
 
     //通过指纹照片 指静脉照内容框的ID对超出显示点击加载更多和多余照片隐藏的功能
     function initPicByClass(divId){
