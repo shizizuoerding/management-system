@@ -51,7 +51,7 @@
     <span class="c-gray en">&gt;</span>
     <span class="color6">导航管理</span>
     <span class="c-gray en">&gt;</span>
-    <span class="color size14">添加导航</span>
+    <span class="color size14">编辑导航</span>
     <a class="btn btn-default radius r" style="line-height:1.6em;margin-top:3px" href="javascript:history.go(-1)" title="返回" ><i class="Hui-iconfont">返回</i></a>
 </nav>
 <div class="page-container">
@@ -91,33 +91,41 @@
                     图文介绍
                 </td>
                 <td>
-                    <span class="btn-upload form-group ml-10">
-                        <input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly="" nullmsg="请添加图片！" style="width:200px">
-                        <a href="javascript:void(0);" class="btn-primary upload-btn btn bs-cb">选择文件</a>
-                        <input type="file" multiple="" name="file-2" class="input-file valid">
-                    </span>
-                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">确定</a>
-                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">添加文字</a>
+                    <div class="btn btn-primary radius ml-10 layui-bg-b" id="photo">添加图片</div>
+                    <div class="btn btn-primary radius ml-10 layui-bg-b" id="word">添加文字</div>
                 </td>
             </tr>
             </tbody>
         </table>
+        
         <table class="table table-bordered">
-            <tbody>
+            <tbody id="tuwen">
                 <tr>
-                    <td class="bg-ob text-c"><img src="../../common/images/bingmayong1.jpg" style="width:450px;height:250px;"></td>
+                    <td class="bg-ob text-c">
+                        <div class="img-content">
+                            <img src="../../common/images/delete.png" class="delete-btn" alt="">
+                            <img src="../../common/images/bingmayong1.jpg" style="width:100%;height:auto;">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="img-content">
+                            <img src="../../common/images/delete.png" class="delete-btn" alt="">
+                            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;background:#fff;">       兵马俑即秦始皇兵马俑，亦简称秦兵马俑或秦俑，位于今陕西省西安市临潼区秦始皇陵以东1.5公里处的兵马俑坑内。
+       兵马俑是古代墓葬雕塑的一个类别。古代实行人殉，奴隶是奴隶主生前的附属品，奴隶主死后奴隶要作为殉葬品为奴隶主陪葬。兵马俑即制成兵马（战车、战马、士兵）形状的殉葬品。
+       1974年3月，兵马俑被发现；1987年，秦始皇陵及兵马俑坑被联合国教科文组织批准列入《世界遗产名录》，并被誉为“世界第八大奇迹”。先后已有200多位国家领导人参观访问，成为中国古代辉煌文明的一张金字名片。
+       人殉是伴随原始公有制的瓦解而萌芽，至奴隶制建立而盛行的一项残酷的丧葬制度。人殉最兴盛的时代是殷商时期，商代贵族大墓中都有殉人。在安阳殷墟工陵区内，已发掘的十几座大墓中被生殉、杀殉的多达五千余人。
+       周王朝吸取了殷商暴政的教训，强调“明德保民”。周礼的诞生和推行，使得人殉现象得到很大程度的抑制，但并未根绝。到了春秋时期，列国争霸，时代动荡，人殉复燃。战国时期，诸侯各国先后废止了人殉制度。秦献公元年（前384年），“止从死”，秦国正式废止人殉制度。
+       春秋战国之际的社会变革促使葬俗发生了变化，出现以俑殉葬，即用陶俑、木俑等来代替人殉。“俑”的本意就是人殉，当人殉逐渐淡出人们的视野之后，“俑”便成了墓葬中陶塑、石雕、人像的专有名词。秦兵马俑就是以俑代人殉葬的典型，也是以俑代人殉葬的顶峰。秦俑之所以在规模、写实程度上达到如此的高度，除了工匠的智慧之外，还与历史上第一个封建皇帝的意志分不开。秦俑严格地摹拟实物，带有肖像写生的性质和特点，并且在规模和气势上更胜一筹。
+       据《史记》记载：秦始皇陵由丞相李斯依惯例开始主持规划设计，大将章邯监工，修筑时间长达39年之久，兵马俑是修筑秦陵的同时制作并埋入随葬坑内。</textarea>
+                        </div>
+                    </td>
+
                 </tr>
             </tbody>
         </table>
-            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
-            <table class="table table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="bg-ob text-c"><img src="../../common/images/tongmache.jpg" style="width:450px;height:250px;"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
+
         <table class="table table-bordered" style="margin-top:10px;">
             <tbody>
             <tr>

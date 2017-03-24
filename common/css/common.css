@@ -153,3 +153,18 @@ a.btn-success:hover{
     box-sizing: border-box;
     padding:10px;
 }
+
+.img-content{
+    position: relative;
+    width: 100%;
+}
+
+.delete-btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: white;
+    border-radius: 50%;
+}
