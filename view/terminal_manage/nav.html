@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="后台管理系统">
+    <meta name="description" content="后台管理系统">
+    <!--[if lt IE 9]>
+    <script src="../common/js/html5.js"></script>
+    <script src="../common/js/respond.min.js"></script>
+    <script src="../common/js/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../common/plugin/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" href="../../common/plugin/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" href="../../common/plugin/icheck/icheck.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" href="../../common/css/common.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=cb84c659c88a7cc83b935a009b3a9cfd&plugin=AMap.Geocoder"></script>
+    <!--[if IE 6]>
+    <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>后台管理系统</title>
+</head>
+<style>
+    .text-c{
+        height: 44px;
+    }
+    .p-160{
+        width: 160px;
+    }
+    textarea{
+        border: 1px solid #ddd;
+        box-sizing:border-box;
+    }
+    #container{
+        height: 500px;
+        margin: 0px
+        width:100%;
+    }
+</style>
+<body>
+<nav class="breadcrumb">
+    <span class="size14 color6">当前位置：</span>
+    <span class="color6">系统首页</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color6">导航管理</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color size14">添加导航</span>
+    <a class="btn btn-default radius r" style="line-height:1.6em;margin-top:3px" href="javascript:history.go(-1)" title="返回" ><i class="Hui-iconfont">返回</i></a>
+</nav>
+<div class="page-container">
+    <div class="col-md-12 mt-20 mb-20">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <!-- td class="bg-ob text-c">被授权对象：</td>
+                    <td>操作员</td> -->
+                    <td class="bg-ob text-c" style="width: 200px">位置名称：</td>
+                    <!-- <td class="bg-ob text-c">兵马俑</td> -->
+                    <td style="background:#fff;">
+                        <div class="input-group nav-name">
+                            <input type="text" class="input-text" value=""  placeholder="">
+                        </div>
+                    </td>
+                    <td class="bg-ob text-c" style="width: 200px">所在城市：</td>
+                    <td style="background:#fff;">
+                        <div class="input-group nav-city">
+                            <input type="text" class="input-text" value="" placeholder="">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="table-header clearfix bg-ob" style="margin-top:10px;">景点标注</div>
+        <div id="container"></div>
+
+
+        <div class="table-header clearfix bg-ob" style="margin-top:10px;">简单介绍</div>
+        <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;padding:10px;box-sizing:border-box;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
+        <table class="table table-bordered" style="margin-top:10px;border-bottom: 0;">
+            <tbody>
+            <tr>
+                <td style="width:100px;text-align: center;">
+                    图文介绍
+                </td>
+                <td>
+                    <span class="btn-upload form-group ml-10">
+                        <input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly="" nullmsg="请添加图片！" style="width:200px">
+                        <a href="javascript:void(0);" class="btn-primary upload-btn btn bs-cb">选择文件</a>
+                        <input type="file" multiple="" name="file-2" class="input-file valid">
+                    </span>
+                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">确定</a>
+                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">添加文字</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td class="bg-ob text-c"><img src="../../common/images/bingmayong1.jpg" style="width:450px;height:250px;"></td>
+                </tr>
+            </tbody>
+        </table>
+            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="bg-ob text-c"><img src="../../common/images/tongmache.jpg" style="width:450px;height:250px;"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
+        <table class="table table-bordered" style="margin-top:10px;">
+            <tbody>
+            <tr>
+                <td style="width:100px;text-align: center;">
+                    语音介绍
+                </td>
+                <td>
+                    <span class="btn-upload form-group ml-10">
+                        <input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly="" nullmsg="请添加语音文件！" style="width:200px">
+                        <a href="javascript:void(0);" class="btn-primary upload-btn btn bs-cb">选择文件</a>
+                        <input type="file" multiple="" name="file-2" class="input-file valid">
+                    </span>
+                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">确定</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="text-c mt-20 layer-btn-content mb-20" style="margin-left: 0px;">
+            <div class="btn btn-primary radius mr-10 layui-bg-b" id="baocun">保存</div>
+        </div>
+<script src="../../common/js/jquery-1.9.1.min.js"></script>
+<script src="../../common/plugin/h-ui/js/H-ui.js"></script>
+<script src="../../common/plugin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="../../common/js/plugin/layer/2.1/layer.js"></script>
+<script src="../../common/js/plugin/laypage/1.2/laypage.js"></script>
+<!-- <script src="../../common/js/jquery.contextmenu.r2.js"></script> -->
+<script src="../../common/js/common.js"></script>
+</body>
+<script>
+    var map, geolocation;
+    //加载地图，调用浏览器定位服务
+    map = new AMap.Map('container', {
+        resizeEnable: true,
+        zoom:19
+    });
+    map.plugin('AMap.Geolocation', function() {
+        geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,//是否使用高精度定位，默认:true
+            timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+            // buttonDom:'<div class="geolocation-position"><img src="/img/position.png"></div>',
+            buttonOffset: new AMap.Pixel(20, 25),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+            zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+            buttonPosition:'LB',
+            showCircle:false,
+            useNative:true
+        });
+        map.addControl(geolocation);
+        geolocation.getCurrentPosition();
+        AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+        AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+    });
+
+    AMap.plugin(['AMap.ToolBar','AMap.Scale','AMap.OverView'],
+        function(){
+            map.addControl(new AMap.ToolBar());
+
+            map.addControl(new AMap.Scale());
+
+            map.addControl(new AMap.OverView({isOpen:true}));
+    });
+
+
+    //解析定位结果
+    function onComplete(data) {
+        var str=['定位成功'];
+        str.push('经度：' + data.position.getLng());
+        str.push('纬度：' + data.position.getLat());
+        str.push('精度：' + data.accuracy + ' 米');
+        str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+        console.log("定位成功");
+    }
+    //解析定位错误信息
+    function onError(data) {
+        
+    }
+    // var timeIv;
+    // AMap.plugin(['AMap.Autocomplete','AMap.PlaceSearch'],function(){
+    //   var autoOptions = {
+    //     input: "search"//使用联想输入的input的id
+    //   };
+    //   autocomplete= new AMap.Autocomplete(autoOptions);
+    //   var placeSearch = new AMap.PlaceSearch({
+    //         map:map
+    //   })
+    //   AMap.event.addListener(autocomplete, "select", function(e){
+    //      //TODO 针对选中的poi实现自己的功能
+    //      console.log("123");
+    //      console.log(e.poi);
+    //      placeSearch.setCity(e.poi.adcode);
+    //      placeSearch.search(e.poi.name);
+    //      $.router.load("#router");
+    //      //这里是设置一个延时来判断是否标注加载完成
+    //      timeIv = setInterval(function(){
+    //       console.log($(".amap-marker").length);
+    //       if($(".amap-marker").length > 5){
+    //         clearInterval(timeIv);
+    //         // map.clearMap();
+    //         $(".amap_lib_placeSearch_poi").hide();
+    //       }
+    //      }, 10);
+    //   });
+    // });
+
+    // window.map = map;
+
+    //获取地址
+      function getAddress(lnglatXY, callback) {
+          var geocoder = new AMap.Geocoder({
+              radius: 1000,
+              extensions: "all"
+          });
+          geocoder.getAddress(lnglatXY, function(status, result) {
+              if (status === 'complete' && result.info === 'OK') {
+                  var address = result.regeocode; //返回地址描述
+                  console.log(address);
+                  callback.success(address);
+                  var address = {
+                      province: address.addressComponent.province,
+                      city: address.addressComponent.city,
+                      district: address.addressComponent.district
+                  }
+              }
+          });
+      }
+
+    //点击标注
+      map.on('click', function(e) {
+        console.log(e.lnglat.lng);
+          //隐藏列表
+          // $(".amap-sug-result").css("visibility", "hidden");
+
+          // $(".address .edit-li-img").attr("src", "/img/edit/address-02.png");
+          // //加入full
+          // $(".address .edit-content").addClass("full");
+
+          map.clearMap();
+          lnglatXY = [e.lnglat.lng, e.lnglat.lat]; //已知点坐标
+
+          getAddress(lnglatXY, {
+              success: function(address) {
+                  var detail = address.formattedAddress;
+                  var address = {
+                      province: address.addressComponent.province,
+                      city: address.addressComponent.city,
+                      district: address.addressComponent.district,
+                      township: address.addressComponent.township
+                  }
+                  var replace = "" + address.province + address.city + address.district + address.township + "";
+                  detail = detail.replace(replace, "");
+                  address.detail = detail;
+                  // var address = JSON.stringify(address);
+                  // console.log(address);
+                  $(".nav-name input").val(address.township+address.detail);
+                  $(".nav-city input").val(address.city);
+
+                  // $(".address .edit-content").attr("data-address", address);
+                  // $(".address .edit-content").text(detail);
+                  // $("#address").val(detail);
+              }
+          });
+          addMark(lnglatXY);
+      });
+</script>
+<script>
+//    demo();
+
+    //通过指纹照片 指静脉照内容框的ID对超出显示点击加载更多和多余照片隐藏的功能
+    function initPicByClass(divId){
+        //通过div的id来对
+        var FCW = $(divId).width();
+        var picN = $(divId+" .l").length;
+        var picW = $(divId+" img").width();
+        if(picW*picN > FCW){
+            var showNum = Math.floor(FCW/130);
+            $(divId+" .mr-5 ").show();
+        }else{
+            $(divId+" .mr-5 ").hide();
+        }
+    }
+
+    //点击展开更多和收起
+   $(".underline").on("click",function(){
+       var text = $(this).text();
+       if(text == "收起"){
+           var id = $(this).parent().parent()[0].id;
+           $("#"+id+" .pic-content").addClass("pic-content-o-hidden");
+           $(this).text("点击展开更多");
+       }else{
+           var id = $(this).parent().parent()[0].id;
+           $("#"+id+" .pic-content").removeClass("pic-content-o-hidden");
+           $(this).text("收起");
+       }
+   })
+
+    //初始化指纹照片 指静脉照内容框的超出显示点击加载更多和多余照片隐藏的功能
+    function initPic(){
+        initPicByClass("#fingerprint-content");
+        initPicByClass("#fingervein-content");
+    }
+    initPic();
+    $("#baocun").on("click",function(){
+        var obj = this;
+        layer.confirm('确认要保存吗？',function(index){
+            //此处请求后台程序，下方是成功后的前台处理……
+            console.log( $(this).parents());
+            // $(obj).parents("tr").remove();
+            layer.msg('已保存!',{icon:1,time:1000});
+        });
+    })
+
+    function addMark(position,img){
+      var icon = new AMap.Icon({
+        size : new AMap.Size(60,60),
+        content:""
+      });
+      marker = new AMap.Marker({
+        icon : icon,//24px*24px
+        map : map,
+        // position: [108.958486,34.271454],
+        position:position,
+        draggable: true,
+        clickable:true,
+        cursor: 'move',
+        raiseOnDrag: true
+      });
+      marker.setMap(map);
+    }
+</script>
+</html>

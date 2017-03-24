@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="keywords" content="后台管理系统">
+    <meta name="description" content="后台管理系统">
+    <!--[if lt IE 9]>
+    <script src="../common/js/html5.js"></script>
+    <script src="../common/js/respond.min.js"></script>
+    <script src="../common/js/PIE_IE678.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../common/plugin/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" href="../../common/plugin/Hui-iconfont/1.0.7/iconfont.css"/>
+    <link rel="stylesheet" href="../../common/plugin/icheck/icheck.css"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" href="../../common/plugin/h-ui.admin/css/style.css"/>
+    <link rel="stylesheet" href="../../common/css/common.css"/>
+    <!--[if IE 6]>
+    <script src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>后台管理系统</title>
+</head>
+<style>
+    .text-c{
+        height: 44px;
+    }
+    textarea{
+        border: 1px solid #ddd;
+    }
+    .aa{
+        width:100%;height:100%;min-height:200px;
+    }
+</style>
+<body>
+<nav class="breadcrumb">
+    <span class="size14 color6">当前位置：</span>
+    <span class="color6">系统首页</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color6">特色城市管理</span>
+    <span class="c-gray en">&gt;</span>
+    <span class="color size14">特色城市详情</span>
+    <a class="btn btn-default radius r" style="line-height:1.6em;margin-top:3px" href="javascript:history.go(-1)" title="返回" ><i class="Hui-iconfont">返回</i></a>
+</nav>
+<div class="page-container">
+    <div class="col-md-12 mt-20 mb-20">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <!-- td class="bg-ob text-c">被授权对象：</td>
+                    <td>操作员</td> -->
+                    <td class="bg-ob text-c">城市名：</td>
+                    <td style="background:#fff;">
+                        <div class="input-group">
+                            <input type="text" class="input-text" value="" placeholder="西安">
+                        </div>
+                    </td>
+                    <td class="bg-ob text-c">所在省份：</td>
+                    <td style="background:#fff;">
+                        <div class="input-group">
+                            <input type="text" class="input-text" value="" placeholder="陕西">
+                        </div>
+                    </td>
+                    <td class="bg-ob text-c">发布时间：</td>
+                    <!-- <td class="bg-ob text-c">2017-01-02</td> -->
+                    <td style="background:#fff;">
+                        <div class="input-group">
+                            <input type="text" class="input-text" value="" placeholder="2017-01-02">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="table-header clearfix bg-ob" style="margin-top:10px;">民俗文化</div>
+        <!-- <table class="table table-bordered">
+            <tbody>
+            <tr><td class="bg-ob text-c"></td></tr>
+            </tbody>
+        </table> -->
+        <textarea class="bg-ob aa" style="padding:10px;background:#fff;" placeholder="秦腔...."></textarea>
+        <div class="table-header clearfix mt-10 bg-ob">历史沿革</div>
+        <textarea class="bg-ob aa" style="padding:10px;background:#fff;" placeholder="西安是国务院公布的首批国家历史文化名城，历史上有周、秦、汉、隋、唐等在内的13个朝代在此建都，是世界四大古都之一........"></textarea>
+        <div class="table-header clearfix mt-10 bg-ob">著名人物</div>
+        <textarea class="bg-ob aa" style="padding:10px;background:#fff;" placeholder="汉武帝刘彻（公元前156年7月14日 －公元前87年3月29日）......"></textarea>
+        <div class="table-header clearfix mt-10 bg-ob">本地特色</div>
+        <textarea class="bg-ob aa" style="padding:10px;background:#fff;" placeholder="西安作为周秦汉唐等朝代的建都之地，是一系列中华民俗文化的诞生之地。....."></textarea>
+    </div>
+</div>
+<div class="text-c mt-20 layer-btn-content mb-20" style="margin-left: 0px;">
+            <div class="btn btn-primary radius mr-10 layui-bg-b" id="baocun">保存</div>
+        </div>
+<script src="../../common/js/jquery-1.9.1.min.js"></script>
+<script src="../../common/plugin/h-ui/js/H-ui.js"></script>
+<script src="../../common/plugin/h-ui.admin/js/H-ui.admin.js"></script>
+<script src="../../common/js/plugin/layer/2.1/layer.js"></script>
+<script src="../../common/js/plugin/laypage/1.2/laypage.js"></script>
+<!-- <script src="../../common/js/jquery.contextmenu.r2.js"></script> -->
+<script src="../../common/js/common.js"></script>
+</body>
+<script>
+//    demo();
+
+    //通过指纹照片 指静脉照内容框的ID对超出显示点击加载更多和多余照片隐藏的功能
+    function initPicByClass(divId){
+        //通过div的id来对
+        var FCW = $(divId).width();
+        var picN = $(divId+" .l").length;
+        var picW = $(divId+" img").width();
+        if(picW*picN > FCW){
+            var showNum = Math.floor(FCW/130);
+            $(divId+" .mr-5 ").show();
+        }else{
+            $(divId+" .mr-5 ").hide();
+        }
+    }
+
+    //点击展开更多和收起
+   $(".underline").on("click",function(){
+       var text = $(this).text();
+       if(text == "收起"){
+           var id = $(this).parent().parent()[0].id;
+           $("#"+id+" .pic-content").addClass("pic-content-o-hidden");
+           $(this).text("点击展开更多");
+       }else{
+           var id = $(this).parent().parent()[0].id;
+           $("#"+id+" .pic-content").removeClass("pic-content-o-hidden");
+           $(this).text("收起");
+       }
+   })
+
+    //初始化指纹照片 指静脉照内容框的超出显示点击加载更多和多余照片隐藏的功能
+    function initPic(){
+        initPicByClass("#fingerprint-content");
+        initPicByClass("#fingervein-content");
+    }
+    initPic();
+    $("#baocun").on("click",function(){
+        var obj = this;
+        layer.confirm('确认要保存吗？',function(index){
+            //此处请求后台程序，下方是成功后的前台处理……
+            console.log( $(this).parents());
+            // $(obj).parents("tr").remove();
+            layer.msg('已保存!',{icon:1,time:1000});
+        });
+    })
+</script>
+</html>
