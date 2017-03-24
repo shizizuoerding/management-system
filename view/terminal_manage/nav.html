@@ -49,9 +49,9 @@
     <span class="size14 color6">当前位置：</span>
     <span class="color6">系统首页</span>
     <span class="c-gray en">&gt;</span>
-    <span class="color6">景点管理</span>
+    <span class="color6">导航管理</span>
     <span class="c-gray en">&gt;</span>
-    <span class="color size14">景点详情</span>
+    <span class="color size14">添加导航</span>
     <a class="btn btn-default radius r" style="line-height:1.6em;margin-top:3px" href="javascript:history.go(-1)" title="返回" ><i class="Hui-iconfont">返回</i></a>
 </nav>
 <div class="page-container">
@@ -61,17 +61,17 @@
                 <tr>
                     <!-- td class="bg-ob text-c">被授权对象：</td>
                     <td>操作员</td> -->
-                    <td class="bg-ob text-c">景点名称：</td>
+                    <td class="bg-ob text-c" style="width: 200px">位置名称：</td>
                     <!-- <td class="bg-ob text-c">兵马俑</td> -->
                     <td style="background:#fff;">
-                        <div class="input-group">
-                            <input type="text" class="input-text" value="" placeholder="兵马俑">
+                        <div class="input-group nav-name">
+                            <input type="text" class="input-text" value=""  placeholder="">
                         </div>
                     </td>
-                    <td class="bg-ob text-c">所在城市：</td>
+                    <td class="bg-ob text-c" style="width: 200px">所在城市：</td>
                     <td style="background:#fff;">
-                        <div class="input-group">
-                            <input type="text" class="input-text" value="" placeholder="西安">
+                        <div class="input-group nav-city">
+                            <input type="text" class="input-text" value="" placeholder="">
                         </div>
                     </td>
                 </tr>
@@ -131,37 +131,6 @@
                         <input type="file" multiple="" name="file-2" class="input-file valid">
                     </span>
                     <a class="btn btn-primary radius ml-10 layui-bg-b" href="">确定</a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <table class="table table-bordered" style="margin-top:10px;border-bottom: 0;">
-            <tbody>
-            <tr>
-                <td style="width:100px;text-align: center;">
-                    相册
-                </td>
-                <td>
-                    <span class="btn-upload form-group ml-10">
-                        <input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly="" nullmsg="请添加图片！" style="width:200px">
-                        <a href="javascript:void(0);" class="btn-primary upload-btn btn bs-cb">选择文件</a>
-                        <input type="file" multiple="" name="file-2" class="input-file valid">
-                    </span>
-                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">确定</a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <table class="table table-bordered">
-            <tbody>
-            <tr>
-                <td>
-                    <img src="../../common/images/bing1.jpg" class="p-120 p-160">
-                    <img src="../../common/images/bing2.jpg" class="p-120 p-160">
-                    <img src="../../common/images/bing3.jpg" class="p-120 p-160">
-                    <img src="../../common/images/bing4.jpg" class="p-120 p-160">
-                    <img src="../../common/images/bing5.jpg" class="p-120 p-160">
-                    <img src="../../common/images/bing6.jpg" class="p-120 p-160">
                 </td>
             </tr>
             </tbody>
@@ -256,6 +225,26 @@
 
     // window.map = map;
 
+    //获取地址
+      function getAddress(lnglatXY, callback) {
+          var geocoder = new AMap.Geocoder({
+              radius: 1000,
+              extensions: "all"
+          });
+          geocoder.getAddress(lnglatXY, function(status, result) {
+              if (status === 'complete' && result.info === 'OK') {
+                  var address = result.regeocode; //返回地址描述
+                  console.log(address);
+                  callback.success(address);
+                  var address = {
+                      province: address.addressComponent.province,
+                      city: address.addressComponent.city,
+                      district: address.addressComponent.district
+                  }
+              }
+          });
+      }
+
     //点击标注
       map.on('click', function(e) {
         console.log(e.lnglat.lng);
@@ -269,24 +258,29 @@
           map.clearMap();
           lnglatXY = [e.lnglat.lng, e.lnglat.lat]; //已知点坐标
 
-          marker = new AMap.Marker({
-              // icon: icon, //24px*24px
-              map: map,
-              position: [e.lnglat.lng, e.lnglat.lat],
-              draggable: true,
-              cursor: 'move',
-              raiseOnDrag: true,
-              clickable: true
+          getAddress(lnglatXY, {
+              success: function(address) {
+                  var detail = address.formattedAddress;
+                  var address = {
+                      province: address.addressComponent.province,
+                      city: address.addressComponent.city,
+                      district: address.addressComponent.district,
+                      township: address.addressComponent.township
+                  }
+                  var replace = "" + address.province + address.city + address.district + address.township + "";
+                  detail = detail.replace(replace, "");
+                  address.detail = detail;
+                  // var address = JSON.stringify(address);
+                  // console.log(address);
+                  $(".nav-name input").val(address.township+address.detail);
+                  $(".nav-city input").val(address.city);
+
+                  // $(".address .edit-content").attr("data-address", address);
+                  // $(".address .edit-content").text(detail);
+                  // $("#address").val(detail);
+              }
           });
-
-          // localStorage["lng"] = e.lnglat.getLng();
-          // localStorage["lat"] = e.lnglat.getLat();
-
-          // $("#container").attr("data-lng", e.lnglat.getLng());
-          // $("#container").attr("data-lat", e.lnglat.getLat());
-          // //拖动标注后回调的坐标
-          marker.setMap(map);
-          // initMarker(marker);
+          addMark(lnglatXY);
       });
 </script>
 <script>
@@ -336,13 +330,22 @@
         });
     })
 
-    // var map = new AMap.Map('mapContainer',{
-    //     zoom:12,
-    //     center:[116.39,39.9]
-    // });
-    // AMap.plugin('AMap.ToolBar',function(){//异步
-    //     var toolbar = new AMap.ToolBar();
-    //     map.plugin(toolbar);
-    // });
+    function addMark(position,img){
+      var icon = new AMap.Icon({
+        size : new AMap.Size(60,60),
+        content:""
+      });
+      marker = new AMap.Marker({
+        icon : icon,//24px*24px
+        map : map,
+        // position: [108.958486,34.271454],
+        position:position,
+        draggable: true,
+        clickable:true,
+        cursor: 'move',
+        raiseOnDrag: true
+      });
+      marker.setMap(map);
+    }
 </script>
 </html>

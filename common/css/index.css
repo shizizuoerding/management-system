@@ -106,3 +106,7 @@ body{background-color: #F1F1F1}
     white-space:nowrap;
     text-overflow:ellipsis;
 }
+
+.Hui-aside .menu_dropdown .menu-nav,.Hui-aside .menu_dropdown .menu-nav:hover{
+	background-image: url(../images/nav.png);
+}
