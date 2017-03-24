@@ -168,3 +168,9 @@ a.btn-success:hover{
     background-color: white;
     border-radius: 50%;
 }
+
+textarea{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+}
