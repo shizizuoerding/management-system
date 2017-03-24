@@ -91,25 +91,25 @@
                     图文介绍
                 </td>
                 <td>
-                    <span class="btn-upload form-group ml-10">
+                    <!-- <span class="btn-upload form-group ml-10">
                         <input class="input-text upload-url" type="text" name="uploadfile" id="uploadfile" readonly="" nullmsg="请添加图片！" style="width:200px">
                         <a href="javascript:void(0);" class="btn-primary upload-btn btn bs-cb">选择文件</a>
                         <input type="file" multiple="" name="file-2" class="input-file valid">
-                    </span>
-                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">确定</a>
-                    <a class="btn btn-primary radius ml-10 layui-bg-b" href="">添加文字</a>
+                    </span> -->
+                    <div class="btn btn-primary radius ml-10 layui-bg-b" id="photo">添加图片</div>
+                    <div class="btn btn-primary radius ml-10 layui-bg-b" id="word">添加文字</div>
                 </td>
             </tr>
             </tbody>
         </table>
         <table class="table table-bordered">
-            <tbody>
-                <tr>
+            <tbody id="tuwen">
+                <!-- <tr>
                     <td class="bg-ob text-c"><img src="../../common/images/bingmayong1.jpg" style="width:450px;height:250px;"></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
-            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
+            <!-- <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
             <table class="table table-bordered">
                 <tbody>
                     <tr>
@@ -117,7 +117,7 @@
                     </tr>
                 </tbody>
             </table>
-            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea>
+            <textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;border-top:0;padding:10px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea> -->
         <table class="table table-bordered" style="margin-top:10px;">
             <tbody>
             <tr>
@@ -135,7 +135,7 @@
             </tr>
             </tbody>
         </table>
-        <table class="table table-bordered" style="margin-top:10px;border-bottom: 0;">
+        <!-- <table class="table table-bordered" style="margin-top:10px;border-bottom: 0;">
             <tbody>
             <tr>
                 <td style="width:100px;text-align: center;">
@@ -165,7 +165,7 @@
                 </td>
             </tr>
             </tbody>
-        </table>
+        </table> -->
     </div>
 </div>
 <div class="text-c mt-20 layer-btn-content mb-20" style="margin-left: 0px;">
@@ -335,5 +335,15 @@
     //     var toolbar = new AMap.ToolBar();
     //     map.plugin(toolbar);
     // });
+    $(".table-bordered").on("click","#photo",function(){
+        console.log(1323443);
+        var str = '<tr><td class="bg-ob text-c"><img src="../../common/images/bingmayong1.jpg" style="width:100%;height:auto;"></td></tr>';
+        $("#tuwen").append(str);
+    })
+    $(".table-bordered").on("click","#word",function(){
+        console.log(1323443);
+        var str = '<tr><td><textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea></td></tr>';
+        $("#tuwen").append(str);
+    })
 </script>
 </html>
