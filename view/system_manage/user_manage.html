@@ -357,5 +357,14 @@
             layer.msg('已删除!',{icon:1,time:1000});
         });
     })
+    $(".radius").on("click",function(){
+        var obj = this;
+        layer.confirm('确认要删除吗？',function(index){
+            //此处请求后台程序，下方是成功后的前台处理……
+            console.log( $(this).parents());
+            // $(obj).parents("tr").remove();
+            layer.msg('已删除!',{icon:1,time:1000});
+        });
+    })
 </script>
 </html>
