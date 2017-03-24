@@ -196,12 +196,12 @@ function api_ajax(url, method, values, isHide, title, callback) {
     });
 }
 
- $(".table-bordered").on("click","#photo",function(){
+ $(document).on("click","#photo",function(){
         console.log(1323443);
         var str = '<tr><td class="bg-ob text-c"><div class="img-content"><img src="../../common/images/delete.png" class="delete-btn" alt=""><img src="../../common/images/bingmayong1.jpg" style="width:100%;height:auto;"></div></td></tr>';
         $("#tuwen").append(str);
     })
-$(".table-bordered").on("click","#word",function(){
+$(document).on("click","#word",function(){
         console.log(1323443);
         var str = '<tr><td><div class="img-content"><img src="../../common/images/delete.png" class="delete-btn" alt=""><textarea class="bg-ob" style="width:100%;height:100%;min-height:200px;background:#fff;" placeholder="兵马俑博物馆位于西安临潼区秦始皇陵东1.5公里处，是秦始皇陵的从葬坑，被誉为..."></textarea></div></td></tr>';
         $("#tuwen").append(str);
