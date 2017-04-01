@@ -56,7 +56,7 @@
         <a href="nav.html">
             <div class="btn btn-primary radius mr-10 layui-bg-b create-u">添加导航</div>
         </a>
-        <div class="btn btn-warning radius item_del">批量删除</div>
+        <div class="btn btn-warning radius item_del item">批量删除</div>
     </div>
     <div class="col-md-12 mt-20">
         <!-- <div class="table-header clearfix">
@@ -177,7 +177,7 @@
             layer.msg('已删除!',{icon:1,time:1000});
         });
     })
-    $(".radius").on("click",function(){
+    $(".item").on("click",function(){
         var obj = this;
         layer.confirm('确认要删除吗？',function(index){
             //此处请求后台程序，下方是成功后的前台处理……
